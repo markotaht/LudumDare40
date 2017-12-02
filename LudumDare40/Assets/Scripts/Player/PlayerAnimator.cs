@@ -35,7 +35,7 @@ public class PlayerAnimator : MonoBehaviour {
 
     bool getDirection()
     {
-        if(playerControl._direction.x > 0)
+        if(playerControl._lastdirection.x > 0)
         {
             return true;
         } else {
