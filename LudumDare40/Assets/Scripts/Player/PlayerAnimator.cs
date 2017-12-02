@@ -17,8 +17,8 @@ public class PlayerAnimator : MonoBehaviour {
 
     void Update()
     {
-        playerAnimation.SetFloat("XSpeed", playerControl._direction.x);
-        playerAnimation.SetFloat("YSpeed", playerControl._direction.z);
+        playerAnimation.SetFloat("XSpeed", playerControl._H);
+        playerAnimation.SetFloat("YSpeed", playerControl._V);
 
         playerSprite.flipX = getDirection();
 
@@ -28,7 +28,7 @@ public class PlayerAnimator : MonoBehaviour {
         {
             playerAnimation.SetBool("isMoving", true);
             playerAnimation.SetFloat("LastX", playerControl._lastdirection.x);
-            playerAnimation.SetFloat("LastY", playerControl._lastdirection.z);
+            playerAnimation.SetFloat("LastY", playerControl._lastdirection.y);
         } else {
             playerAnimation.SetBool("isMoving", false);
         }
