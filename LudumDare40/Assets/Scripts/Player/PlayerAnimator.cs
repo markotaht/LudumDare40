@@ -39,9 +39,9 @@ public class PlayerAnimator : MonoBehaviour {
     {
         if(playerControl._lastdirection.x > 0)
         {
-            return true;
-        } else {
             return false;
+        } else {
+            return true;
         }
     }
 
