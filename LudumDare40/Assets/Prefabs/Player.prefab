@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 143933978838745776}
   - component: {fileID: 114866720720801846}
   - component: {fileID: 114730211923336230}
-  - component: {fileID: 114495237628054040}
+  - component: {fileID: 82898347274315164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 95640227612572396}
   - component: {fileID: 114206375390834360}
   - component: {fileID: 114009256673719992}
-  - component: {fileID: 82864366003544916}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -77,12 +76,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82864366003544916
+--- !u!82 &82898347274315164
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1755822229174118}
+  m_GameObject: {fileID: 1119419516000862}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -189,6 +188,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2dccbbd3bb85e9a4bbd0f19457ef4424, type: 3}
   - {fileID: 8300000, guid: c5b0022477c4e8242ace540721cbf3f0, type: 3}
   - {fileID: 8300000, guid: bc067a9464967b54696ad22531bbcb6c, type: 3}
+  attack:
+  - {fileID: 8300000, guid: a372a693083458f4e802d2efede5a4ab, type: 3}
+  - {fileID: 8300000, guid: 4f2c1090ca1436c4a8f67fed56e760f3, type: 3}
+  playerSound: {fileID: 82898347274315164}
 --- !u!114 &114206375390834360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,21 +203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8562712950d56094cb257d6221403db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114495237628054040
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1119419516000862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17aca4587adf25545a879c6dc967ce19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  footsteps:
-  - {fileID: 8300000, guid: 2dccbbd3bb85e9a4bbd0f19457ef4424, type: 3}
-  - {fileID: 8300000, guid: c5b0022477c4e8242ace540721cbf3f0, type: 3}
-  - {fileID: 8300000, guid: bc067a9464967b54696ad22531bbcb6c, type: 3}
 --- !u!114 &114730211923336230
 MonoBehaviour:
   m_ObjectHideFlags: 1

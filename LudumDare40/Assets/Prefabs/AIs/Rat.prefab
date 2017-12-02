@@ -243,6 +243,8 @@ MonoBehaviour:
   _range: 0.2
   _maxhealth: 100
   _health: 0
+  drops:
+  - {fileID: 1030500487757960, guid: 213f0df140ea03b439326937ba0ed03d, type: 2}
 --- !u!114 &114905012141322500
 MonoBehaviour:
   m_ObjectHideFlags: 1
