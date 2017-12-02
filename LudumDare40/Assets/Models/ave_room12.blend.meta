@@ -1,11 +1,110 @@
 fileFormatVersion: 2
-guid: 2e1dea0b10676cd4394b2a8d9114498d
-timeCreated: 1512250839
+guid: adbc68c4746a76c49958b5aa1b498fab
+timeCreated: 1512252032
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
-  fileIDToRecycleName: {}
-  externalObjects: {}
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: gate1
+    100004: gate2_1
+    100006: gate2_2
+    100008: wall1
+    100010: wall2
+    100012: wall3
+    100014: wall4
+    100016: wall5
+    100018: wall6
+    100020: window1
+    100022: window1frame
+    100024: window2
+    100026: window2_001
+    100028: window4
+    100030: window4frame
+    100032: window5
+    100034: window5frame
+    400000: //RootNode
+    400002: gate1
+    400004: gate2_1
+    400006: gate2_2
+    400008: wall1
+    400010: wall2
+    400012: wall3
+    400014: wall4
+    400016: wall5
+    400018: wall6
+    400020: window1
+    400022: window1frame
+    400024: window2
+    400026: window2_001
+    400028: window4
+    400030: window4frame
+    400032: window5
+    400034: window5frame
+    2300000: gate1
+    2300002: gate2_1
+    2300004: gate2_2
+    2300006: wall1
+    2300008: wall2
+    2300010: wall3
+    2300012: wall4
+    2300014: wall5
+    2300016: wall6
+    2300018: window1
+    2300020: window1frame
+    2300022: window2
+    2300024: window2_001
+    2300026: window4
+    2300028: window4frame
+    2300030: window5
+    2300032: window5frame
+    3300000: gate1
+    3300002: gate2_1
+    3300004: gate2_2
+    3300006: wall1
+    3300008: wall2
+    3300010: wall3
+    3300012: wall4
+    3300014: wall5
+    3300016: wall6
+    3300018: window1
+    3300020: window1frame
+    3300022: window2
+    3300024: window2_001
+    3300026: window4
+    3300028: window4frame
+    3300030: window5
+    3300032: window5frame
+    4300000: window2_001
+    4300002: window5frame
+    4300004: window4frame
+    4300006: window1
+    4300008: window4
+    4300010: window5
+    4300012: gate2_2
+    4300014: wall2
+    4300016: gate2_1
+    4300018: gate1
+    4300020: window2
+    4300022: window1frame
+    4300024: wall3
+    4300026: wall4
+    4300028: wall5
+    4300030: wall6
+    4300032: wall1
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Krohvitud_pinnad
+    second: {fileID: 2100000, guid: a4e773bbd1f7de646a5b37deafac9f0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tina
+    second: {fileID: 2100000, guid: 141d022e7b4dbcf4784efe94477a2fda, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

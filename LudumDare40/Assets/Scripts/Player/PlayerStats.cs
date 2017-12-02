@@ -71,7 +71,7 @@ public class PlayerStats : MonoBehaviour {
             }
         }
 
-        DC.SetBuff(buff, currentBuffs[buff]);
+        DC.SetBuff(buff, currentBuffs[buff], true);
         //Update stats:
         if(buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
         {
@@ -96,7 +96,7 @@ public class PlayerStats : MonoBehaviour {
                 //Remove poisoned visual
             }
         }
-        DC.SetBuff(buff, currentBuffs[buff]);
+        DC.SetBuff(buff, currentBuffs[buff], false);
         //Update stats:
         if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] < 10)
         {
