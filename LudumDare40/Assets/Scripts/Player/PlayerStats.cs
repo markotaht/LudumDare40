@@ -12,6 +12,8 @@ public class PlayerStats : MonoBehaviour {
 
     public Image _healthBar;
 
+    public DebuffUIController DC;
+
     //Buffs
     public enum Buff { Slowed, Bleeding };
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
@@ -65,6 +67,8 @@ public class PlayerStats : MonoBehaviour {
                 //Add poisoned visual
             }
         }
+
+        DC.SetBuff(buff, currentBuffs[buff]);
         //Update stats:
         if(buff == Buff.Slowed)
         {
@@ -88,6 +92,7 @@ public class PlayerStats : MonoBehaviour {
                 //Remove poisoned visual
             }
         }
+        DC.SetBuff(buff, currentBuffs[buff]);
         //Update stats:
         if (buff == Buff.Slowed)
         {
