@@ -145,7 +145,7 @@ MonoBehaviour:
   _speed: 2
   _damage: 0.5
   _range: 1
-  _maxhealth: 0
+  _maxhealth: 100
   _projectile: {fileID: 1509675070023646, guid: bbe2867f9049d5e4882b8bcc3cd24438,
     type: 2}
 --- !u!212 &212796523560096564

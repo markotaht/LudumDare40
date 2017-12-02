@@ -145,7 +145,7 @@ MonoBehaviour:
   _speed: 1
   _damage: 1
   _range: 0.2
-  _maxhealth: 0
+  _maxhealth: 100
 --- !u!212 &212785111559097528
 SpriteRenderer:
   m_ObjectHideFlags: 1
