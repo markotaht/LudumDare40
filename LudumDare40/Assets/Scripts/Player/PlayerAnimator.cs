@@ -22,6 +22,8 @@ public class PlayerAnimator : MonoBehaviour {
 
         playerSprite.flipX = getDirection();
 
+        playerAnimation.SetBool("isAttacking", isAttacking());
+
         if(playerControl._velocity > 0)
         {
             playerAnimation.SetBool("isMoving", true);
@@ -41,6 +43,11 @@ public class PlayerAnimator : MonoBehaviour {
         } else {
             return false;
         }
+    }
+
+    bool isAttacking()
+    {
+        return playerControl._attacking;
     }
 
 }
