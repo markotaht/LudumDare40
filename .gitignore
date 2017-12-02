@@ -32,3 +32,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+/LudumDare40/.vs/LudumDare40/v15/Server/sqlite3
+/LudumDare40/.vs/LudumDare40/v15/Server/sqlite3/storage.ide-wal
+/LudumDare40/.vs/LudumDare40/v15/Server/sqlite3/*.ide-shm
