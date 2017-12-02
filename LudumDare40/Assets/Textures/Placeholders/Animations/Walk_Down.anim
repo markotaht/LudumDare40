@@ -80,4 +80,12 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.25
+    functionName: Step
+    data: 
+    objectReferenceParameter: {fileID: 1119419516000862, guid: ad14ba26d0e31e44da61575a948615f6,
+      type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
