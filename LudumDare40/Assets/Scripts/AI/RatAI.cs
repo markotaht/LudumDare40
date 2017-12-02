@@ -42,6 +42,10 @@ public class RatAI : MonoBehaviour {
     void Hit()
     {
         _player.GetComponent<PlayerStats>().OnHit(_damage);
+        if(Random.Range(0, 100) < 25)
+        {
+            _player.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Bleeding);
+        }
     }
 
 }
