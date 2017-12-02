@@ -7,8 +7,8 @@ public class PlayerStats : MonoBehaviour {
 
     [SerializeField] public float _speed;
     [SerializeField] public float _damage;
-    [SerializeField] public float _health;
     [SerializeField] public float _maxhealth;
+    private float _health;
 
     public Image _healthBar;
 
@@ -21,8 +21,11 @@ public class PlayerStats : MonoBehaviour {
 
     private void Start()
     {
+        //Add 0 of ALL buffs
         currentBuffs.Add(Buff.Slowed, 0);
         currentBuffs.Add(Buff.Bleeding, 0);
+
+        _health = _maxhealth;
     }
 
     private void Update()

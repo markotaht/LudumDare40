@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyAI : MonoBehaviour {
+public class FlyAI : AbstractAI {
 
-    public GameObject _player;
-    public float _speed;
-    public float _damage;
-    public float _range;
     public GameObject _projectile;
 
     //debug:

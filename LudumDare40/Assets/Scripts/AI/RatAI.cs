@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RatAI : MonoBehaviour {
-
-    public GameObject _player;
-    public float _speed;
-    public float _damage;
-    public float _range;
-
+public class RatAI : AbstractAI {
+    
     //debug:
     private float cd = 3;
     private float cdCounter = 0;
