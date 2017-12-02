@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
     PlayerStats playerStats;
     CharacterController controller;
 
+    public bool _attacking;
+
 
     // Use this for initialization
     void Start () {
@@ -34,11 +36,29 @@ public class PlayerController : MonoBehaviour {
             _lastdirection = controller.velocity;
         }
 
-
         _direction *= playerStats._speed;
 
         controller.Move(_direction * Time.deltaTime);
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Attack(playerStats._damage);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("Stopping");
+            _attacking = false;
+        }
+
+    }
+
+    void Attack(float damage)
+    {
+        _attacking = true;
+        Debug.Log("Attacking:" + damage);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _lastdirection);
+        Debug.DrawRay(transform.position, _lastdirection, Color.black);
     }
 
 }
