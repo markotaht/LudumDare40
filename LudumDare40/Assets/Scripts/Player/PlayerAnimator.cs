@@ -25,6 +25,8 @@ public class PlayerAnimator : MonoBehaviour {
         if(playerControl._velocity > 0)
         {
             playerAnimation.SetBool("isMoving", true);
+            playerAnimation.SetFloat("LastX", playerControl._lastdirection.x);
+            playerAnimation.SetFloat("LastY", playerControl._lastdirection.z);
         } else {
             playerAnimation.SetBool("isMoving", false);
         }
