@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RatAI : MonoBehaviour {
+public class FlyAI : MonoBehaviour {
 
     public GameObject _player;
     public float _speed;
     public float _damage;
     public float _range;
+    public GameObject _projectile;
 
     //debug:
-    private float cd = 3;
+    private float cd = 1;
     private float cdCounter = 0;
 
 	// Use this for initialization
@@ -29,7 +30,7 @@ public class RatAI : MonoBehaviour {
             //Trigger attack animation
             if (cdCounter <= 0)
             {
-                Hit();
+                Shoot();
                 cdCounter = cd;
             }
             else
@@ -39,9 +40,10 @@ public class RatAI : MonoBehaviour {
         }
 	}
 
-    void Hit()
+    void Shoot()
     {
-        _player.GetComponent<PlayerStats>().OnHit(_damage);
+        Projectile projectile = Instantiate(_projectile, transform.position, transform.rotation).GetComponent<Projectile>();
+        projectile.Shoot(_player, _damage);
     }
 
 }
