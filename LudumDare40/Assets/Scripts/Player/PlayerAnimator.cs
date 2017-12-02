@@ -17,8 +17,8 @@ public class PlayerAnimator : MonoBehaviour {
 
     void Update()
     {
-        playerAnimation.SetFloat("XSpeed", playerControl._direction.x);
-        playerAnimation.SetFloat("YSpeed", playerControl._direction.y);
+        playerAnimation.SetFloat("XSpeed", playerControl._H);
+        playerAnimation.SetFloat("YSpeed", playerControl._V);
 
         playerSprite.flipX = getDirection();
 

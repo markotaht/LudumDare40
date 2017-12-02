@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public Vector3 _direction;
     public Vector3 _lastdirection;
     public float _velocity;
+    public float _H;
+    public float _V;
 
     PlayerStats playerStats;
     CharacterController controller;
@@ -24,8 +26,8 @@ public class PlayerController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        var _H = Input.GetAxisRaw("Horizontal");
-        var _V = Input.GetAxisRaw("Vertical");
+        _H = Input.GetAxisRaw("Horizontal");
+        _V = Input.GetAxisRaw("Vertical");
 
         _direction = new Vector3(_H, _V, 0).normalized;
         _direction = transform.TransformDirection(_direction);
