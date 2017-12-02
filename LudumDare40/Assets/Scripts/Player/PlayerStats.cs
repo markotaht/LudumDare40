@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour {
     public void OnHit(float damage)
     {
         _health -= damage;
+        Debug.Log("Hit, health=" + _health);
     }
 
 }
