@@ -9,15 +9,21 @@ public abstract class AbstractAI : MonoBehaviour {
     public float _damage;
     public float _range;
     public float _maxhealth;
-    private float _health;
+    public float _health;
+
 
     // Use this for initialization
     void Start () {
         _health = _maxhealth;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnEnable()
+    {
+        _health = _maxhealth;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
