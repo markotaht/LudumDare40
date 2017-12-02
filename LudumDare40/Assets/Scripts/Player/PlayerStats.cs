@@ -70,9 +70,9 @@ public class PlayerStats : MonoBehaviour {
 
         DC.SetBuff(buff, currentBuffs[buff]);
         //Update stats:
-        if(buff == Buff.Slowed)
+        if(buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
         {
-            _speed *= 0.75f;
+            _speed *= 0.93f;
         }
         //Update UI or whatever
     }
@@ -94,9 +94,9 @@ public class PlayerStats : MonoBehaviour {
         }
         DC.SetBuff(buff, currentBuffs[buff]);
         //Update stats:
-        if (buff == Buff.Slowed)
+        if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] < 10)
         {
-            _speed /= 0.75f;
+            _speed /= 0.93f;
         }
         //Update UI or whatever
     }
