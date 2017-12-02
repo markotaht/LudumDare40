@@ -7,6 +7,7 @@ public class Door : MonoBehaviour {
 	[SerializeField] private RoomController nextRoom;
     [SerializeField] private RoomController currentRoom;
 
+    //Until mobs can be killed
     private bool active = true;
 
     public RoomController NextRoom

@@ -11,6 +11,14 @@ public class RoomController : MonoBehaviour {
 
     [SerializeField] public int roomId = 1;
 
+    private void Start()
+    {
+        if(MobCount == 0)
+        {
+            DecreaseMobCounter(0);
+        }
+    }
+
     public void Load(RoomController previousRoom) {
 
         foreach(Door s in doors)

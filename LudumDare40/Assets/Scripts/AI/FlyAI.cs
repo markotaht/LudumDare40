@@ -38,7 +38,7 @@ public class FlyAI : AbstractAI {
 
     void Shoot()
     {
-        Projectile projectile = Instantiate(_projectile, transform.position, transform.rotation).GetComponent<Projectile>();
+        Projectile projectile = Instantiate(_projectile, transform.position, Quaternion.EulerAngles(90,0,0)).GetComponent<Projectile>();
         projectile.Shoot(_player, _damage);
     }
 

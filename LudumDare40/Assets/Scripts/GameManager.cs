@@ -38,4 +38,5 @@ public class GameManager : MonoBehaviour
     {
         _player.transform.position = position + _player._lastdirection * 0.2f;
     }
+
 }
