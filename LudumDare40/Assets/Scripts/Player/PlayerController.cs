@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 
         if (_H < 0 || _H > 0 || _V < 0 || _V > 0)
         {
-            _lastdirection = controller.velocity;
+            _lastdirection = controller.velocity.normalized;
         }
 
         _direction *= playerStats._speed;
