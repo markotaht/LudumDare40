@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     public Vector3 _direction;
+    public float _velocity;
 
     PlayerStats playerStats;
     CharacterController controller;
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 
         _direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         _direction = transform.TransformDirection(_direction);
-
+        _velocity = controller.velocity.magnitude;
         _direction *= playerStats._speed;
 
         controller.Move(_direction * Time.deltaTime);

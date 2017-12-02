@@ -22,6 +22,13 @@ public class PlayerAnimator : MonoBehaviour {
 
         playerSprite.flipX = getDirection();
 
+        if(playerControl._velocity > 0)
+        {
+            playerAnimation.SetBool("isMoving", true);
+        } else {
+            playerAnimation.SetBool("isMoving", false);
+        }
+
     }
 
     bool getDirection()
@@ -33,6 +40,5 @@ public class PlayerAnimator : MonoBehaviour {
             return false;
         }
     }
-
 
 }
