@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
 
     [SerializeField] public float _speed;
     [SerializeField] public float _damage;
     [SerializeField] public float _health;
+    [SerializeField] public float _maxhealth;
+
+    public Image _healthBar;
 
     //Buffs
     public enum Buff { Slowed, Bleeding };
@@ -30,6 +34,7 @@ public class PlayerStats : MonoBehaviour {
         if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
             _health -= 0.1f * currentBuffs[Buff.Bleeding];
+            UpdateHealth();
             bleedingCounter = 1;
         }
     }
@@ -37,6 +42,7 @@ public class PlayerStats : MonoBehaviour {
     public void OnHit(float damage)
     {
         _health -= damage;
+        UpdateHealth();
         Debug.Log("Hit, health=" + _health);
     }
 
@@ -85,5 +91,13 @@ public class PlayerStats : MonoBehaviour {
             _speed /= 0.75f;
         }
         //Update UI or whatever
+    }
+
+    private void UpdateHealth()
+    {
+        if(_healthBar != null)
+        {
+            _healthBar.fillAmount = _health / _maxhealth;
+        }
     }
 }

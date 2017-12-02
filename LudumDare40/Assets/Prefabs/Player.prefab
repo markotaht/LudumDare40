@@ -187,6 +187,8 @@ MonoBehaviour:
   _speed: 1
   _damage: 10
   _health: 100
+  _maxhealth: 100
+  _healthBar: {fileID: 0}
 --- !u!114 &114866720720801846
 MonoBehaviour:
   m_ObjectHideFlags: 1
