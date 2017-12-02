@@ -138,6 +138,7 @@ public class PlayerStats : MonoBehaviour {
 
     public IEnumerator DeathScreen()
     {
+        DeathFade.gameObject.SetActive(true);
         while (DeathFade.color.a < 0.99)
         {
             DeathFade.color = Color.Lerp(DeathFade.color, Color.black, 1f * Time.deltaTime);

@@ -32,6 +32,7 @@ public class InGameMenuController : MonoBehaviour {
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
     }
 
     public void Quit()

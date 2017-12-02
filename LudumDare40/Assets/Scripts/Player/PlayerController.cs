@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour {
         }
 
         _direction *= playerStats._speed;
-
         controller.Move(_direction * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.Space))
