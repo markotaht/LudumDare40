@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private RoomController _currentRoom;
-    [SerializeField] private Transform _player;
+    [SerializeField] private PlayerController _player;
 
     public RoomController CurrentRoom
     {
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+
     public void DecreaseMobCounter()
     {
         _currentRoom.DecreaseMobCounter(-1);
@@ -35,6 +36,6 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayerLocation(Vector3 position)
     {
-        _player.position = position;
+        _player.transform.position = position + _player._lastdirection * 0.2f;
     }
 }

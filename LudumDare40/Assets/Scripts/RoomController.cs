@@ -9,14 +9,14 @@ public class RoomController : MonoBehaviour {
 
     [SerializeField] private int MobCount = 6;
 
-    [SerializeField] private int roomId = 1;
+    [SerializeField] public int roomId = 1;
 
     public void Load(RoomController previousRoom) {
-        Vector3 playerPosition;
+
         foreach(Door s in doors)
         {
-            if(s.NextRoom == previousRoom) {
-                playerPosition = s.transform.position;
+            if(s.NextRoom.roomId == previousRoom.roomId) {
+                GameManager.instance.SetPlayerLocation(s.transform.position);
                 break;
             }
         }
