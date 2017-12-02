@@ -7,7 +7,7 @@ public class Door : MonoBehaviour {
 	[SerializeField] private RoomController nextRoom;
     [SerializeField] private RoomController currentRoom;
 
-    private bool active = false;
+    private bool active = true;
 
     public RoomController NextRoom
     {
