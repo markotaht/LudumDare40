@@ -44,32 +44,14 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space))
         {
-            Attack(playerStats._damage);
+            _attacking = true;
+            Invoke("StopAttack", 0.1f);
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Debug.Log("Stopping");
-            _attacking = false;
-        }
-
     }
 
-    void Attack(float damage)
+    void StopAttack()
     {
-        _attacking = true;
-        Debug.DrawRay(transform.position, _lastdirection, Color.black);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, _lastdirection, out hit)){
-            if(hit.transform.gameObject.GetComponent<AbstractAI>() != null && hit.distance < 0.5f)
-            {
-                Debug.Log("Hitting enemy");
-                GameObject enemy_hit = hit.transform.gameObject;
-                enemy_hit.GetComponent<AbstractAI>().OnHit(damage);
-            } else {
-                Debug.Log(hit.transform.gameObject);
-            }
-        }
+        _attacking = false;
     }
 
 }
