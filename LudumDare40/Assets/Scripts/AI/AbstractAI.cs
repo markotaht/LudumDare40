@@ -10,6 +10,7 @@ public abstract class AbstractAI : MonoBehaviour {
     public float _range;
     public float _maxhealth;
     public float _health;
+    public List<GameObject> drops;
 
 
     // Use this for initialization
@@ -44,6 +45,14 @@ public abstract class AbstractAI : MonoBehaviour {
 
     private void Die() {
         GameManager.instance.DecreaseMobCounter();
+        if(drops.Count != 0)
+        {
+            if (Random.Range(0, 100) < 50)
+            {
+                System.Random r = new System.Random();
+                var drop = Instantiate(drops[r.Next(drops.Count)], transform.position, Quaternion.Euler(0, 0, 0));
+            }
+        }
         Destroy(gameObject);
     }
 
