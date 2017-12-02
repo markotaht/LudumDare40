@@ -8,6 +8,10 @@ public class RatAI : MonoBehaviour {
     public float _speed;
     public float _damage;
 
+    //debug:
+    private float cd = 3;
+    private float cdCounter = 0;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,7 +26,15 @@ public class RatAI : MonoBehaviour {
         else
         {
             //Trigger attack animation
-
+            if (cdCounter <= 0)
+            {
+                Hit();
+                cdCounter = cd;
+            }
+            else
+            {
+                cdCounter -= Time.deltaTime;
+            }
         }
 	}
 
