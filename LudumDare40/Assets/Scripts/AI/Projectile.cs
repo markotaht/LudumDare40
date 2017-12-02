@@ -33,6 +33,10 @@ public class Projectile : MonoBehaviour {
     {
         _target = player;
         _damage = damage;
+        if (Random.Range(0, 100) < 10)
+        {
+            _target.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Slowed);
+        }
     }
 
 }
