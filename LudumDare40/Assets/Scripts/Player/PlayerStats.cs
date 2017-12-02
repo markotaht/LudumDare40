@@ -15,6 +15,9 @@ public class PlayerStats : MonoBehaviour {
 
     public DebuffUIController DC;
 
+    public Image DeathFade;
+    public GameObject deathMenu;
+
     //Buffs
     public enum Buff { Slowed, Bleeding };
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
@@ -126,6 +129,20 @@ public class PlayerStats : MonoBehaviour {
         if(_healthBar != null)
         {
             _healthBar.fillAmount = _health / _maxhealth;
+            if(_health <= 0)
+            {
+                StartCoroutine(DeathScreen());
+            }
         }
+    }
+
+    public IEnumerator DeathScreen()
+    {
+        while (DeathFade.color.a < 0.99)
+        {
+            DeathFade.color = Color.Lerp(DeathFade.color, Color.black, 1f * Time.deltaTime);
+            yield return null;
+        }
+        deathMenu.SetActive(true);
     }
 }
