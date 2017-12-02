@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4286899949116800}
   - component: {fileID: 114086246065307792}
+  - component: {fileID: 65015449160353744}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647464764624608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4130609581012184}
@@ -100,6 +101,18 @@ Transform:
   m_Father: {fileID: 4130609581012184}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65015449160353744
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647464764624608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 2, z: 0.40378153}
+  m_Center: {x: 0, y: 0.13862243, z: 0.15189078}
 --- !u!95 &95610061483763990
 Animator:
   serializedVersion: 3

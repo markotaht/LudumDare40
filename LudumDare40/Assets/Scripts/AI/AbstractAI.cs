@@ -38,6 +38,7 @@ public abstract class AbstractAI : MonoBehaviour {
 
     private void Die() {
         GameManager.instance.DecreaseMobCounter();
+        Destroy(gameObject);
     }
 
 }

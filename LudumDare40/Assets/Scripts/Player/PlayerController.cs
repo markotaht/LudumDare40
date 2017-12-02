@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour {
         var _H = Input.GetAxisRaw("Horizontal");
         var _V = Input.GetAxisRaw("Vertical");
 
-        _direction = new Vector3(_H, 0, _V);
+        _direction = new Vector3(_H, 0, _V).normalized;
         _direction = transform.TransformDirection(_direction);
         _velocity = controller.velocity.magnitude;
 
@@ -56,9 +56,18 @@ public class PlayerController : MonoBehaviour {
     void Attack(float damage)
     {
         _attacking = true;
-        Debug.Log("Attacking:" + damage);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, _lastdirection);
         Debug.DrawRay(transform.position, _lastdirection, Color.black);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, _lastdirection, out hit)){
+            if(hit.transform.gameObject.GetComponent<AbstractAI>() != null && hit.distance < 0.5f)
+            {
+                Debug.Log("Hitting enemy");
+                GameObject enemy_hit = hit.transform.gameObject;
+                enemy_hit.GetComponent<AbstractAI>().OnHit(damage);
+            } else {
+                Debug.Log(hit.transform.gameObject);
+            }
+        }
     }
 
 }
