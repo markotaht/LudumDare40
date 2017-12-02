@@ -22,11 +22,22 @@ public class PlayerAnimator : MonoBehaviour {
 
         playerSprite.flipX = getDirection();
 
+        playerAnimation.SetBool("isAttacking", isAttacking());
+
+        if(playerControl._velocity > 0)
+        {
+            playerAnimation.SetBool("isMoving", true);
+            playerAnimation.SetFloat("LastX", playerControl._lastdirection.x);
+            playerAnimation.SetFloat("LastY", playerControl._lastdirection.z);
+        } else {
+            playerAnimation.SetBool("isMoving", false);
+        }
+
     }
 
     bool getDirection()
     {
-        if(playerControl._direction.x > 0)
+        if(playerControl._lastdirection.x > 0)
         {
             return true;
         } else {
@@ -34,5 +45,9 @@ public class PlayerAnimator : MonoBehaviour {
         }
     }
 
+    bool isAttacking()
+    {
+        return playerControl._attacking;
+    }
 
 }
