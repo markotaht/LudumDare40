@@ -38,7 +38,8 @@ public class RoomController : MonoBehaviour {
 
     public void DecreaseMobCounter(int dif)
     {
-        MobCount -= dif;
+        MobCount += dif;
+        Debug.Log(MobCount);
         if(MobCount == 0)
         {
             foreach (Door d in doors)
