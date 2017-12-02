@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 4286899949116800}
   - component: {fileID: 114086246065307792}
   - component: {fileID: 65015449160353744}
+  - component: {fileID: 65099217457081380}
   m_Layer: 0
   m_Name: Fly
   m_TagString: Untagged
@@ -150,6 +151,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 2, z: 0.40378153}
   m_Center: {x: 0, y: 0.13862243, z: 0.15189078}
+--- !u!65 &65099217457081380
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647464764624608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13, y: 0.5, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!95 &95610061483763990
 Animator:
   serializedVersion: 3
@@ -261,7 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1776560113cc64244be6d27821ec800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 114262388184332420}
 --- !u!212 &212796523560096564
 SpriteRenderer:
   m_ObjectHideFlags: 1

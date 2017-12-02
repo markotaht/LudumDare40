@@ -57,6 +57,8 @@ GameObject:
   - component: {fileID: 4299769353647030}
   - component: {fileID: 114790126164859156}
   - component: {fileID: 65818893455545824}
+  - component: {fileID: 135605697456039570}
+  - component: {fileID: 65827513139141954}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -150,6 +152,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15, y: 2, z: 0.40378153}
   m_Center: {x: 0, y: 0.13862243, z: 0.15189078}
+--- !u!65 &65827513139141954
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340533481960860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.18, y: 0.66, z: 0.16}
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!95 &95716754476758628
 Animator:
   serializedVersion: 3
@@ -226,7 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1776560113cc64244be6d27821ec800b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 114034132681275450}
 --- !u!114 &114790126164859156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +273,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!135 &135605697456039570
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1340533481960860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0.15}
 --- !u!212 &212785111559097528
 SpriteRenderer:
   m_ObjectHideFlags: 1
