@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerStats : MonoBehaviour {
 
@@ -48,7 +49,6 @@ public class PlayerStats : MonoBehaviour {
     {
         _health -= damage;
         UpdateHealth();
-        Debug.Log("Hit, health=" + _health);
     }
 
     public void AddBuff(Buff buff)
@@ -79,6 +79,7 @@ public class PlayerStats : MonoBehaviour {
 
     public void RemoveBuff(Buff buff)
     {
+        Debug.Log("Removed " + buff);
         currentBuffs[buff] -= 1;
         if (currentBuffs[buff] == 0)
         {
@@ -99,6 +100,25 @@ public class PlayerStats : MonoBehaviour {
             _speed /= 0.93f;
         }
         //Update UI or whatever
+    }
+
+    public void AddRandomBuff()
+    {
+        AddBuff((Buff)Random.Range(0, currentBuffs.Count));
+    }
+
+    public void RemoveRandomBuff()
+    {
+        System.Random r = new System.Random();
+        List<Buff> presentBuffs = currentBuffs.Where(p => p.Value > 0).Select(p => p.Key).ToList();
+        if(presentBuffs.Count != 0)
+        {
+            RemoveBuff(presentBuffs[r.Next(presentBuffs.Count)]);
+        }
+        else
+        {
+            Debug.Log("Nothing happened");
+        }
     }
 
     private void UpdateHealth()

@@ -23,6 +23,7 @@ public class DebuffUIController : MonoBehaviour {
 
         if(count == 0)
         {
+            _debuffs.Remove(debuff);
             Destroy(go);
             return;
         }
