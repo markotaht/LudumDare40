@@ -33,3 +33,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 /LudumDare40/.vs/LudumDare40/v15/Server/sqlite3
+.vs
