@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4133980259841020}
   - component: {fileID: 212463778945274152}
+  - component: {fileID: 114343971367096020}
   m_Layer: 0
   m_Name: FlySpit
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114343971367096020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1509675070023646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43967d2234b500f4db8b321364ee27fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0
 --- !u!212 &212463778945274152
 SpriteRenderer:
   m_ObjectHideFlags: 1
