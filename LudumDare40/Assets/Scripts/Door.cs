@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomSwitch : MonoBehaviour {
+public class Door : MonoBehaviour {
 
 	[SerializeField] private RoomController nextRoom;
     [SerializeField] private RoomController currentRoom;
+
+    private bool active = false;
 
     public RoomController NextRoom
     {
@@ -15,9 +17,15 @@ public class RoomSwitch : MonoBehaviour {
         }
     }
 
+    public void OpenDoor()
+    {
+        active = true;
+        //Muuda ukse pilti/ava uks vms
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && active)
         {
             currentRoom.Unload();
             nextRoom.Load(currentRoom);
