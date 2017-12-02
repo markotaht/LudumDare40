@@ -1,0 +1,1960 @@
+fileFormatVersion: 2
+guid: 2d23f22e13b72ad45b04c83cec0167d8
+timeCreated: 1512206114
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: link_spritesheet_0
+    21300002: link_spritesheet_1
+    21300004: link_spritesheet_2
+    21300006: link_spritesheet_3
+    21300008: link_spritesheet_4
+    21300010: link_spritesheet_5
+    21300012: link_spritesheet_6
+    21300014: link_spritesheet_7
+    21300016: link_spritesheet_8
+    21300018: link_spritesheet_9
+    21300020: link_spritesheet_10
+    21300022: link_spritesheet_11
+    21300024: link_spritesheet_12
+    21300026: link_spritesheet_13
+    21300028: link_spritesheet_14
+    21300030: link_spritesheet_15
+    21300032: link_spritesheet_16
+    21300034: link_spritesheet_17
+    21300036: link_spritesheet_18
+    21300038: link_spritesheet_19
+    21300040: link_spritesheet_20
+    21300042: link_spritesheet_21
+    21300044: link_spritesheet_22
+    21300046: link_spritesheet_23
+    21300048: link_spritesheet_24
+    21300050: link_spritesheet_25
+    21300052: link_spritesheet_26
+    21300054: link_spritesheet_27
+    21300056: link_spritesheet_28
+    21300058: link_spritesheet_29
+    21300060: link_spritesheet_30
+    21300062: link_spritesheet_31
+    21300064: link_spritesheet_32
+    21300066: link_spritesheet_33
+    21300068: link_spritesheet_34
+    21300070: link_spritesheet_35
+    21300072: link_spritesheet_36
+    21300074: link_spritesheet_37
+    21300076: link_spritesheet_38
+    21300078: link_spritesheet_39
+    21300080: link_spritesheet_40
+    21300082: link_spritesheet_41
+    21300084: link_spritesheet_42
+    21300086: link_spritesheet_43
+    21300088: link_spritesheet_44
+    21300090: link_spritesheet_45
+    21300092: link_spritesheet_46
+    21300094: link_spritesheet_47
+    21300096: link_spritesheet_48
+    21300098: link_spritesheet_49
+    21300100: link_spritesheet_50
+    21300102: link_spritesheet_51
+    21300104: link_spritesheet_52
+    21300106: link_spritesheet_53
+    21300108: link_spritesheet_54
+    21300110: link_spritesheet_55
+    21300112: link_spritesheet_56
+    21300114: link_spritesheet_57
+    21300116: link_spritesheet_58
+    21300118: link_spritesheet_59
+    21300120: link_spritesheet_60
+    21300122: link_spritesheet_61
+    21300124: link_spritesheet_62
+    21300126: link_spritesheet_63
+    21300128: link_spritesheet_64
+    21300130: link_spritesheet_65
+    21300132: link_spritesheet_66
+    21300134: link_spritesheet_67
+    21300136: link_spritesheet_68
+    21300138: link_spritesheet_69
+    21300140: link_spritesheet_70
+    21300142: link_spritesheet_71
+    21300144: link_spritesheet_72
+    21300146: link_spritesheet_73
+    21300148: link_spritesheet_74
+    21300150: link_spritesheet_75
+    21300152: link_spritesheet_76
+    21300154: link_spritesheet_77
+    21300156: link_spritesheet_78
+    21300158: link_spritesheet_79
+    21300160: link_spritesheet_80
+    21300162: link_spritesheet_81
+    21300164: link_spritesheet_82
+    21300166: link_spritesheet_83
+    21300168: link_spritesheet_84
+    21300170: link_spritesheet_85
+    21300172: link_spritesheet_86
+    21300174: link_spritesheet_87
+    21300176: link_spritesheet_88
+    21300178: link_spritesheet_89
+    21300180: link_spritesheet_90
+    21300182: link_spritesheet_91
+    21300184: link_spritesheet_92
+    21300186: link_spritesheet_93
+    21300188: link_spritesheet_94
+    21300190: link_spritesheet_95
+    21300192: link_spritesheet_96
+    21300194: link_spritesheet_97
+    21300196: link_spritesheet_98
+    21300198: link_spritesheet_99
+    21300200: link_spritesheet_100
+    21300202: link_spritesheet_101
+    21300204: link_spritesheet_102
+    21300206: link_spritesheet_103
+    21300208: link_spritesheet_104
+    21300210: link_spritesheet_105
+    21300212: link_spritesheet_106
+    21300214: link_spritesheet_107
+    21300216: link_spritesheet_108
+    21300218: link_spritesheet_109
+    21300220: link_spritesheet_110
+    21300222: link_spritesheet_111
+    21300224: link_spritesheet_112
+    21300226: link_spritesheet_113
+    21300228: link_spritesheet_114
+    21300230: link_spritesheet_115
+    21300232: link_spritesheet_116
+    21300234: link_spritesheet_117
+    21300236: link_spritesheet_118
+    21300238: link_spritesheet_119
+    21300240: link_spritesheet_120
+    21300242: link_spritesheet_121
+    21300244: link_spritesheet_122
+    21300246: link_spritesheet_123
+    21300248: link_spritesheet_124
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: link_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 390
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 390
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 390
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 390
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 390
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 390
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 390
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 390
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 391
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 391
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 391
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 391
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 391
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 391
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 391
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 391
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 357
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 357
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 357
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 357
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 358
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 358
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 358
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 359
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 359
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 359
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 359
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 359
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 359
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 359
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 359
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 359
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 325
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 325
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 325
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 325
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 325
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 325
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 325
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 325
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 326
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 326
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 326
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 326
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 326
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 326
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 326
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 326
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 290
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 290
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 290
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 290
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 290
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 290
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 290
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 290
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 291
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 291
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 292
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 292
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 292
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 292
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 292
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 292
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 258
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 258
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 258
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 259
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 259
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 259
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 258
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 258
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 258
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 258
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 258
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 258
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 226
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 226
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 226
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 227
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 227
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 228
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 228
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 227
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 227
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 230
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 226
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 226
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 229
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 226
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 190
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 191
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 191
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 192
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 191
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 192
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 192
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 192
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 192
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 192
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 192
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 192
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 154
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 151
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 151
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 150
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 152
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 148
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 146
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 146
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 145
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 145
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_112
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 145
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_113
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 115
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_114
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 113
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_115
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 111
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_116
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 109
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_117
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 103
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_118
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 100
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_119
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 105
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_120
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 105
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_121
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 105
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_122
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 105
+        width: 30
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_123
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 99
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: link_spritesheet_124
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 97
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
