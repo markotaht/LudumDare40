@@ -8,4 +8,9 @@ public class PlayerStats : MonoBehaviour {
     [SerializeField] public float _damage;
     [SerializeField] public float _health;
 
+    public void OnHit(float damage)
+    {
+        _health -= damage;
+    }
+
 }
