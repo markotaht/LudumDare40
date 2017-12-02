@@ -27,11 +27,8 @@ public class PlayerController : MonoBehaviour {
         var _H = Input.GetAxisRaw("Horizontal");
         var _V = Input.GetAxisRaw("Vertical");
 
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(0.1f, 0.1f, 0.1f), transform.position.z);
-
-        _direction = new Vector3(_H, 0, _V).normalized;
+        _direction = new Vector3(_H, _V, 0).normalized;
         _direction = transform.TransformDirection(_direction);
-        _direction.y = Mathf.Clamp(0.0f, 0.0f, 0.0f);
         _velocity = controller.velocity.magnitude;
 
         if (_H < 0 || _H > 0 || _V < 0 || _V > 0)
