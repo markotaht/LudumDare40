@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 87cefd65cf07be94fba706d59fce3608
-timeCreated: 1512331801
+timeCreated: 1512334492
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,12 +88,12 @@ TextureImporter:
       name: character_fight_front2_0
       rect:
         serializedVersion: 2
-        x: 283
-        y: 2700
-        width: 255
+        x: 48
+        y: 2701
+        width: 563
         height: 440
       alignment: 9
-      pivot: {x: 0.31378245, y: 0.03154963}
+      pivot: {x: 0.55642855, y: 0.55668557}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -102,12 +102,12 @@ TextureImporter:
       name: character_fight_front2_1
       rect:
         serializedVersion: 2
-        x: 186
+        x: 49
         y: 2251
-        width: 301
-        height: 432
+        width: 562
+        height: 448
       alignment: 9
-      pivot: {x: 0.58270496, y: 0.01987203}
+      pivot: {x: 0.55715597, y: 0.52892196}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,10 +118,10 @@ TextureImporter:
         serializedVersion: 2
         x: 49
         y: 1802
-        width: 450
-        height: 426
+        width: 561
+        height: 446
       alignment: 9
-      pivot: {x: 0.69971734, y: 0.03508261}
+      pivot: {x: 0.55672604, y: 0.54577035}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,12 +130,12 @@ TextureImporter:
       name: character_fight_front2_3
       rect:
         serializedVersion: 2
-        x: 179
+        x: 44
         y: 1351
-        width: 301
+        width: 567
         height: 429
       alignment: 9
-      pivot: {x: 0.60450345, y: 0.039051685}
+      pivot: {x: 0.55897087, y: 0.5599994}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,12 +144,12 @@ TextureImporter:
       name: character_fight_front2_4
       rect:
         serializedVersion: 2
-        x: 240
+        x: 44
         y: 898
-        width: 224
-        height: 425
+        width: 569
+        height: 451
       alignment: 9
-      pivot: {x: 0.5560325, y: 0.054871038}
+      pivot: {x: 0.55382586, y: 0.53698593}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,12 +158,12 @@ TextureImporter:
       name: character_fight_front2_5
       rect:
         serializedVersion: 2
-        x: 302
+        x: 44
         y: 449
-        width: 312
+        width: 570
         height: 419
       alignment: 9
-      pivot: {x: 0.1951204, y: 0.044669505}
+      pivot: {x: 0.56277114, y: 0.5767806}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: character_fight_front2_6
       rect:
         serializedVersion: 2
-        x: 281
+        x: 47
         y: 0
-        width: 251
+        width: 568
         height: 437
       alignment: 9
-      pivot: {x: 0.31640115, y: 0.048199464}
+      pivot: {x: 0.5572282, y: 0.5743918}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
