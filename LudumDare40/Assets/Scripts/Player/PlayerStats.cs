@@ -31,6 +31,9 @@ public class PlayerStats : MonoBehaviour {
 
     //Counters
     private float bleedingCounter = 0;
+    private float bleedingCounterMax = 1;
+    private float bleedingTimeoutCounter = 0;
+    private float bleedingTimeoutCounterMax = 10;
 
     private void Start()
     {
@@ -46,12 +49,20 @@ public class PlayerStats : MonoBehaviour {
     {
         //Counters
         bleedingCounter -= Time.deltaTime;
+        bleedingTimeoutCounter -= Time.deltaTime;
 
         //Effects
         if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
             OnHit(0.1f * currentBuffs[Buff.Bleeding]);
-            bleedingCounter = 1;
+            bleedingCounter = bleedingCounterMax;
+        }
+
+        //Timeouts
+        if(currentBuffs[Buff.Bleeding] > 0 && bleedingTimeoutCounter <= 0)
+        {
+            RemoveBuff(Buff.Bleeding);
+            bleedingTimeoutCounter = bleedingTimeoutCounterMax;
         }
     }
 
@@ -67,25 +78,38 @@ public class PlayerStats : MonoBehaviour {
     {
         Debug.Log("Added " + buff);
         currentBuffs[buff] += 1;
+        //Only for new buff
         if(currentBuffs[buff] == 1)
         {
-            FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
             //Add visuals:
             if(buff == Buff.Bleeding)
             {
                 //Add bleeding visual
-                popup.SetSprites(_debuffs[0], _operations[0]);
             }
             else if(buff == Buff.Slowed)
             {
-                popup.SetSprites(_debuffs[1], _operations[0]);
-                //Add poisoned visual
+                //Add slowed visual
             }
             else if (buff == Buff.Dysentery)
             {
-                popup.SetSprites(_debuffs[2], _operations[0]);
-                //Add poisoned visual
+                //Add dysentery visual
             }
+        }
+        //For first AND existing buffs
+        FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
+        //Notify player & do other stuff
+        if (buff == Buff.Bleeding)
+        {
+            popup.SetSprites(_debuffs[0], _operations[0]);
+            bleedingTimeoutCounter = bleedingTimeoutCounterMax;
+        }
+        else if (buff == Buff.Slowed)
+        {
+            popup.SetSprites(_debuffs[1], _operations[0]);
+        }
+        else if (buff == Buff.Dysentery)
+        {
+            popup.SetSprites(_debuffs[2], _operations[0]);
         }
 
         //Update stats:
@@ -103,24 +127,36 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs[buff] -= 1;
         if (currentBuffs[buff] == 0)
         {
-            FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
             //Remove visuals:
             if (buff == Buff.Bleeding)
             {
                 //Remove bleeding visual
-                popup.SetSprites(_debuffs[0], _operations[1]);
             }
             else if (buff == Buff.Slowed)
             {
-                //Remove poisoned visual
-                popup.SetSprites(_debuffs[1], _operations[1]);
+                //Remove slowed visual
             }
             else if (buff == Buff.Dysentery)
             {
-                //Remove poisoned visual
-                popup.SetSprites(_debuffs[2], _operations[1]);
+                //Remove dysentery visual
             }
         }
+
+        FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
+        //Notify player and do stuff
+        if (buff == Buff.Bleeding)
+        {
+            popup.SetSprites(_debuffs[0], _operations[1]);
+        }
+        else if (buff == Buff.Slowed)
+        {
+            popup.SetSprites(_debuffs[1], _operations[1]);
+        }
+        else if (buff == Buff.Dysentery)
+        {
+            popup.SetSprites(_debuffs[2], _operations[1]);
+        }
+
         DC.SetBuff(buff, currentBuffs[buff], false);
         //Update stats:
         if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] < 10)
