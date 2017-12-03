@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour {
 
     public bool _attacking;
 
-
+    private float idleTimer = 0;
+    private float idleDeath = 120;
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-
+        idleTimer += Time.deltaTime;
         _H = Input.GetAxisRaw("Horizontal");
         _V = Input.GetAxisRaw("Vertical");
 
@@ -41,6 +42,7 @@ public class PlayerController : MonoBehaviour {
         if (_H < 0 || _H > 0 || _V < 0 || _V > 0)
         {
             _lastdirection = controller.velocity.normalized;
+            idleTimer = 0;
         }
 
         _direction *= playerStats._speed;
@@ -50,6 +52,12 @@ public class PlayerController : MonoBehaviour {
         {
             _attacking = true;
             Invoke("StopAttack", 0.1f);
+            idleTimer = 0;
+        }
+
+        if(idleTimer >= idleDeath)
+        {
+            playerStats.OnHit(10000, "");
         }
     }
 

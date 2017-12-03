@@ -25,6 +25,10 @@ public class PlayerStats : MonoBehaviour {
 
     public GameObject _damagePopup;
 
+    private string _cause;
+
+    private bool alive;
+
     //Buffs
     public enum Buff { Slowed, Bleeding, Dysentery, Confusion};
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
@@ -50,6 +54,7 @@ public class PlayerStats : MonoBehaviour {
 
     private void Update()
     {
+        if (!alive) return;
         //Counters
         bleedingCounter -= Time.deltaTime;
         bleedingTimeoutCounter -= Time.deltaTime;
@@ -58,7 +63,7 @@ public class PlayerStats : MonoBehaviour {
         //Effects
         if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
-            OnHit(0.1f * currentBuffs[Buff.Bleeding]);
+            OnHit(0.1f * currentBuffs[Buff.Bleeding], "bleeding");
             bleedingCounter = bleedingCounterMax;
         }
 
@@ -75,8 +80,9 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
-    public void OnHit(float damage)
+    public void OnHit(float damage, string cause)
     {
+        _cause = cause;
         _health -= damage;
         DamageNumber dn = Instantiate(_damagePopup, _popupTransform).GetComponent<DamageNumber>();
         dn.SetDamageNumber(-damage);
@@ -220,6 +226,7 @@ public class PlayerStats : MonoBehaviour {
             _healthBar.fillAmount = _health / _maxhealth;
             if(_health <= 0)
             {
+                alive = false;
                 StartCoroutine(DeathScreen());
             }
         }
@@ -233,11 +240,26 @@ public class PlayerStats : MonoBehaviour {
             DeathFade.color = Color.Lerp(DeathFade.color, Color.black, 1f * Time.deltaTime);
             yield return null;
         }
+        deathMenu.GetComponentInChildren<Text>().text = DeathMessage();
         deathMenu.SetActive(true);
     }
 
     private void FlipControls()
     {
         GameManager.instance.Player.inverted = !GameManager.instance.Player.inverted;
+    }
+
+    private string DeathMessage()
+    {
+        if(_cause == "bleeding")
+        {
+            return "Thou has't  bled to death ";
+        }else if(_cause == "Rat")
+        {
+            return "Thee wast killeth by a rat";
+        }else if(_cause == "Fly"){
+            return "Thee hath kicked the bucket from flyes... ";
+        }
+        return "Thee hath kicked the bucket of boredom";
     }
 }
