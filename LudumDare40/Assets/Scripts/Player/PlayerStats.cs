@@ -238,7 +238,6 @@ public class PlayerStats : MonoBehaviour {
 
     private void FlipControls()
     {
-        Debug.Log("FLIP");
-        float verticalInput = Input.GetAxis("Vertical") * -1;
+        GameManager.instance.Player.inverted = !GameManager.instance.Player.inverted;
     }
 }

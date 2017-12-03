@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
     PlayerStats playerStats;
     CharacterController controller;
 
+    public bool inverted = false;
+
     public bool _attacking;
 
 
@@ -29,7 +31,10 @@ public class PlayerController : MonoBehaviour {
         _H = Input.GetAxisRaw("Horizontal");
         _V = Input.GetAxisRaw("Vertical");
 
+
         _direction = new Vector3(_H, _V, 0).normalized;
+        if (inverted) _direction *= -1;
+
         _direction = transform.TransformDirection(_direction);
         _velocity = controller.velocity.magnitude;
 

@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public PlayerController Player
+    {
+        get
+        {
+            return _player;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
