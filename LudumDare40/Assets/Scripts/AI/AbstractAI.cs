@@ -21,20 +21,24 @@ public abstract class AbstractAI : MonoBehaviour {
 
     [SerializeField] private EnemyHealthbar _hpBar;
 
+    private Rigidbody rb;
+
 
     // Use this for initialization
     void Start () {
         _health = _maxhealth;
+        rb = GetComponent<Rigidbody>();
 	}
 
     private void OnEnable()
     {
         _health = _maxhealth;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update () {
-
+        rb.velocity = Vector3.zero;
         if (Vector3.Distance(transform.position, _player.transform.position) > _range)
         {
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
