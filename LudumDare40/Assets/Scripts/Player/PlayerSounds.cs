@@ -21,7 +21,7 @@ public class PlayerSounds : MonoBehaviour {
 
     void Swing() {
         Debug.Log("Swing Sound");
-        int index = Random.Range(0, 2);
+        int index = Random.Range(0, 1);
         swingsound = attack[index];
         playerSound.GetComponent<AudioSource>();
         playerSound.clip = swingsound;
