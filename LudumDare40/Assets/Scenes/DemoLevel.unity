@@ -1759,12 +1759,12 @@ Prefab:
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 354.5
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 199.5
+      value: 126.5
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
@@ -1901,7 +1901,7 @@ Prefab:
         type: 2}
       propertyPath: buffPics.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: c0837b666df56d74b967a88efaa75b9b,
+      objectReference: {fileID: 21300000, guid: 860c4b379d8615d40893c14ff09b1a24,
         type: 3}
     - target: {fileID: 114497545246916128, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
