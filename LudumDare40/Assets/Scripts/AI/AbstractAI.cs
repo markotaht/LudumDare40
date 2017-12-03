@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public abstract class AbstractAI : MonoBehaviour {
 
     public GameObject _player;
+    public GameObject bloodeffect;
     public float _speed;
     public float _damage;
     public float _range;
@@ -55,6 +56,7 @@ public abstract class AbstractAI : MonoBehaviour {
 
     public void OnHit(float damage)
     {
+        Instantiate(bloodeffect, transform.position, Quaternion.identity);
         _health -= damage;
         UpdateHealth();
     }
