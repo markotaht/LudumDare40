@@ -365,8 +365,8 @@ MonoBehaviour:
   BuffImagePrefab: {fileID: 1697238727687184, guid: 15a85aa9c7fffa843b76ef9300c484a2,
     type: 2}
   buffPics:
-  - {fileID: 21300000, guid: f82ca6f0e35824a4db93f999a257207b, type: 3}
-  - {fileID: 21300000, guid: c0837b666df56d74b967a88efaa75b9b, type: 3}
+  - {fileID: 21300000, guid: 068d2891ebafe5b49bea2ba22082e885, type: 3}
+  - {fileID: 21300000, guid: 860c4b379d8615d40893c14ff09b1a24, type: 3}
 --- !u!114 &114238065024689242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,11 +462,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 10
-    m_Right: 25
+    m_Right: 10
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 5
-  m_Spacing: 15
+  m_Spacing: 2
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: b081bd0cfcf7a19489deb7fb4f2230bd, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
