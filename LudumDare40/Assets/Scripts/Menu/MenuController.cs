@@ -11,6 +11,6 @@ public class MenuController : MonoBehaviour {
 
     public void StarGame()
     {
-        SceneManager.LoadScene("DemoLevel");
+        SceneManager.LoadScene("Main");
     }
 }

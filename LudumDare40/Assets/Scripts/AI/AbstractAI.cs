@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class AbstractAI : MonoBehaviour {
 
@@ -11,6 +12,11 @@ public abstract class AbstractAI : MonoBehaviour {
     public float _maxhealth;
     public float _health;
     public List<GameObject> drops;
+
+    [SerializeField] private SpriteRenderer _sprite;
+
+    protected float cd = 1;
+    protected float cdCounter = 0;
 
     [SerializeField] private EnemyHealthbar _hpBar;
 
@@ -27,8 +33,34 @@ public abstract class AbstractAI : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+
+        if(transform.position.x < _player.transform.position.x)
+        {
+            _sprite.flipX = true;
+        }
+        else
+        {
+            _sprite.flipX = false;
+        }
+
+        if (Vector3.Distance(transform.position, _player.transform.position) > _range)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
+        }
+        else
+        {
+            //Trigger attack animation
+            if (cdCounter <= 0)
+            {
+                Attack();
+                cdCounter = cd;
+            }
+            else
+            {
+                cdCounter -= Time.deltaTime;
+            }
+        }
+    }
 
     public void OnHit(float damage)
     {
@@ -57,5 +89,7 @@ public abstract class AbstractAI : MonoBehaviour {
         }
         Destroy(gameObject);
     }
+
+    public abstract void Attack();
 
 }
