@@ -41,7 +41,11 @@ public class Princess : MonoBehaviour {
         WinMessage(out success, out message);
         winText.GetComponentInChildren<Text>().text = message;
         winText.SetActive(true);
-        if (!success) winText.GetComponentInChildren<Text>().color = Color.white;
+        if (!success)
+        {
+            winText.GetComponentInChildren<Text>().color = Color.white;
+            winFade.color = new Color(0, 0, 0, 0);
+        }
         while (winFade.color.a < 0.99)
         {
             winFade.color = Color.Lerp(winFade.color, success ? Color.white : Color.black, 1f * Time.deltaTime);
