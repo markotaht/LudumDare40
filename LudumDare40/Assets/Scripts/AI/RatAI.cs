@@ -12,7 +12,7 @@ public class RatAI : AbstractAI {
 	
     public override void Attack()
     {
-        _player.GetComponent<PlayerStats>().OnHit(_damage);
+        _player.GetComponent<PlayerStats>().OnHit(_damage,"Rat");
         if(Random.Range(0, 100) < 25)
         {
             _player.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Bleeding);
