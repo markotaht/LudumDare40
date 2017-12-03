@@ -23,7 +23,7 @@ public class AIAnimator : MonoBehaviour {
 
     bool getDirection()
     {
-        if (_lastdirection.x > 0)
+        if (transform.position.x < GameManager.instance.Player.transform.position.x)
         {
             return false;
         }

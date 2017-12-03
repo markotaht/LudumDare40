@@ -34,15 +34,6 @@ public abstract class AbstractAI : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if(transform.position.x < _player.transform.position.x)
-        {
-            _sprite.flipX = true;
-        }
-        else
-        {
-            _sprite.flipX = false;
-        }
-
         if (Vector3.Distance(transform.position, _player.transform.position) > _range)
         {
             transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
