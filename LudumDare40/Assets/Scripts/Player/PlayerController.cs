@@ -7,13 +7,18 @@ public class PlayerController : MonoBehaviour {
     public Vector3 _direction;
     public Vector3 _lastdirection;
     public float _velocity;
+    public float _H;
+    public float _V;
 
     PlayerStats playerStats;
     CharacterController controller;
 
+    public bool inverted = false;
+
     public bool _attacking;
 
-
+    private float idleTimer = 0;
+    private float idleDeath = 120;
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
@@ -23,54 +28,42 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        idleTimer += Time.deltaTime;
+        _H = Input.GetAxisRaw("Horizontal");
+        _V = Input.GetAxisRaw("Vertical");
 
-        var _H = Input.GetAxisRaw("Horizontal");
-        var _V = Input.GetAxisRaw("Vertical");
 
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(0.1f, 0.1f, 0.1f), transform.position.z);
+        _direction = new Vector3(_H, _V, 0).normalized;
+        if (inverted) _direction *= -1;
 
-        _direction = new Vector3(_H, 0, _V).normalized;
         _direction = transform.TransformDirection(_direction);
-        _direction.y = Mathf.Clamp(0.0f, 0.0f, 0.0f);
         _velocity = controller.velocity.magnitude;
 
         if (_H < 0 || _H > 0 || _V < 0 || _V > 0)
         {
             _lastdirection = controller.velocity.normalized;
+            idleTimer = 0;
         }
 
         _direction *= playerStats._speed;
-
         controller.Move(_direction * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
-            Attack(playerStats._damage);
+            _attacking = true;
+            Invoke("StopAttack", 0.1f);
+            idleTimer = 0;
         }
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if(idleTimer >= idleDeath)
         {
-            Debug.Log("Stopping");
-            _attacking = false;
+            playerStats.OnHit(10000, "");
         }
-
     }
 
-    void Attack(float damage)
+    void StopAttack()
     {
-        _attacking = true;
-        Debug.DrawRay(transform.position, _lastdirection, Color.black);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, _lastdirection, out hit)){
-            if(hit.transform.gameObject.GetComponent<AbstractAI>() != null && hit.distance < 0.5f)
-            {
-                Debug.Log("Hitting enemy");
-                GameObject enemy_hit = hit.transform.gameObject;
-                enemy_hit.GetComponent<AbstractAI>().OnHit(damage);
-            } else {
-                Debug.Log(hit.transform.gameObject);
-            }
-        }
+        _attacking = false;
     }
 
 }

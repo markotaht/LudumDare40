@@ -23,7 +23,7 @@ public class Projectile : MonoBehaviour {
             }
             else
             {
-                _target.GetComponent<PlayerStats>().OnHit(_damage);
+                _target.GetComponent<PlayerStats>().OnHit(_damage, "Fly");
                 Destroy(gameObject);
             }
         }

@@ -5,16 +5,11 @@ using UnityEngine.UI;
 
 public class EnemyHealthbar : MonoBehaviour {
 
-    GameObject enemy;
-    AbstractAI enemyData;
-    Image healthbar;
+    [SerializeField] private AbstractAI enemy;
+    [SerializeField] private Image healthbar;
 
-	void Start () {
-        enemy = transform.parent.gameObject.transform.parent.gameObject;
-        healthbar = transform.GetComponent<Image>();
-	}
-
-	void Update () {
-        healthbar.fillAmount = enemy.GetComponent<AbstractAI>()._health/ 100;
-	}
+    public void UpdateFillAmount(float amount)
+    {
+        healthbar.fillAmount = amount;
+    }
 }

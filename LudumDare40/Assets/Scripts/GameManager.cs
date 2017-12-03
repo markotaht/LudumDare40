@@ -22,6 +22,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public PlayerController Player
+    {
+        get
+        {
+            return _player;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -36,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayerLocation(Vector3 position)
     {
-        _player.transform.position = position + _player._lastdirection.normalized * 0.2f;
+        _player.transform.position = position + _player._lastdirection.normalized * 0.4f;
     }
 
 }

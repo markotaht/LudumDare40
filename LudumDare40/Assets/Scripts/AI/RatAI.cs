@@ -3,40 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RatAI : AbstractAI {
-    
-    //debug:
-    private float cd = 3;
-    private float cdCounter = 0;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        cd = 3;
+        cdCounter = 0;
+    }
 	
-	// Update is called once per frame
-	void Update () {
-        if(Vector3.Distance(transform.position, _player.transform.position) > _range)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
-        }
-        else
-        {
-            //Trigger attack animation
-            if (cdCounter <= 0)
-            {
-                Hit();
-                cdCounter = cd;
-            }
-            else
-            {
-                cdCounter -= Time.deltaTime;
-            }
-        }
-	}
-
-    void Hit()
+    public override void Attack()
     {
-        _player.GetComponent<PlayerStats>().OnHit(_damage);
+        _player.GetComponent<PlayerStats>().OnHit(_damage,"Rat");
         if(Random.Range(0, 100) < 25)
         {
             _player.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Bleeding);
