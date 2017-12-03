@@ -7,10 +7,11 @@ public class Princess : MonoBehaviour {
     public GameObject _princessSprite;
     [SerializeField] private Image winFade;
     [SerializeField] private GameObject winText;
+    private PlayerStats _playerStats;
 
 	// Use this for initialization
 	void Start () {
-		if(Random.Range(0, 100) < 40)
+		if(Random.Range(0, 100) < 50)
         {
             _princessSprite.SetActive(false);
         }
@@ -25,6 +26,7 @@ public class Princess : MonoBehaviour {
     {
         if (other.GetComponent<PlayerStats>())
         {
+            _playerStats = other.GetComponent<PlayerStats>();
             StartCoroutine(WinScreen());
 
             GetComponent<Collider>().enabled = false;
@@ -34,24 +36,43 @@ public class Princess : MonoBehaviour {
     public IEnumerator WinScreen()
     {
         winFade.gameObject.SetActive(true);
-        winText.GetComponentInChildren<Text>().text = WinMessage();
+        bool success;
+        string message;
+        WinMessage(out success, out message);
+        winText.GetComponentInChildren<Text>().text = message;
         winText.SetActive(true);
+        if (!success) winText.GetComponentInChildren<Text>().color = Color.white;
         while (winFade.color.a < 0.99)
         {
-            winFade.color = Color.Lerp(winFade.color, Color.white, 1f * Time.deltaTime);
+            winFade.color = Color.Lerp(winFade.color, success ? Color.white : Color.black, 1f * Time.deltaTime);
             yield return null;
         }
     }
 
-    public string WinMessage()
+    public void WinMessage(out bool success, out string message)
     {
         if (_princessSprite.activeInHierarchy)
         {
-            return "Thou art in luck, this castle enwheels a princess!";
+            if (_playerStats.HasDysentery())
+            {
+                message = "The princess rejects thee because thee has't shat thyself.";
+                success = false;
+            }
+            else
+            {
+                message = "Thou art in luck, h'r highness likes thee!";
+                success = true;
+            }
+
         }
         else
         {
-            return "Th're is nay signeth of the princess, sadly the lady wilt has't did flee already.";
+            success = false;
+            float random = Random.Range(0, 100);
+            if(random < 50) 
+                message = "Th're is nay signeth of the princess.";
+            else
+                message = "Thy princess is in anoth'r castle.";
         }
     }
 }
