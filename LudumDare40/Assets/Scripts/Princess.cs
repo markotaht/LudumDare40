@@ -34,13 +34,13 @@ public class Princess : MonoBehaviour {
     public IEnumerator WinScreen()
     {
         winFade.gameObject.SetActive(true);
+        winText.GetComponentInChildren<Text>().text = WinMessage();
+        winText.SetActive(true);
         while (winFade.color.a < 0.99)
         {
             winFade.color = Color.Lerp(winFade.color, Color.white, 1f * Time.deltaTime);
             yield return null;
         }
-        winText.GetComponentInChildren<Text>().text = WinMessage();
-        winText.SetActive(true);
     }
 
     public string WinMessage()
