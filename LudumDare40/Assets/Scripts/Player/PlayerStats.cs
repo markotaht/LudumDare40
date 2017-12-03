@@ -18,6 +18,13 @@ public class PlayerStats : MonoBehaviour {
     public Image DeathFade;
     public GameObject deathMenu;
 
+    public Sprite[] _debuffs;
+    public Sprite[] _operations;
+    public GameObject _popup;
+    public Transform _popupTransform;
+
+    public GameObject _damagePopup;
+
     //Buffs
     public enum Buff { Slowed, Bleeding };
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
@@ -51,6 +58,8 @@ public class PlayerStats : MonoBehaviour {
     public void OnHit(float damage)
     {
         _health -= damage;
+        DamageNumber dn = Instantiate(_damagePopup, _popupTransform).GetComponent<DamageNumber>();
+        dn.SetDamageNumber(-damage);
         UpdateHealth();
     }
 
@@ -60,13 +69,16 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs[buff] += 1;
         if(currentBuffs[buff] == 1)
         {
+            FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
             //Add visuals:
             if(buff == Buff.Bleeding)
             {
                 //Add bleeding visual
+                popup.SetSprites(_debuffs[0], _operations[0]);
             }
             else if(buff == Buff.Slowed)
             {
+                popup.SetSprites(_debuffs[1], _operations[0]);
                 //Add poisoned visual
             }
         }
@@ -86,14 +98,17 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs[buff] -= 1;
         if (currentBuffs[buff] == 0)
         {
+            FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
             //Remove visuals:
             if (buff == Buff.Bleeding)
             {
                 //Remove bleeding visual
+                popup.SetSprites(_debuffs[0], _operations[1]);
             }
             else if (buff == Buff.Slowed)
             {
                 //Remove poisoned visual
+                popup.SetSprites(_debuffs[1], _operations[1]);
             }
         }
         DC.SetBuff(buff, currentBuffs[buff], false);
