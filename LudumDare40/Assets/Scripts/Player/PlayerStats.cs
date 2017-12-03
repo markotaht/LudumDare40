@@ -263,4 +263,10 @@ public class PlayerStats : MonoBehaviour {
         }
         return "Thee hath kicked the bucket of boredom";
     }
+
+    public bool HasDysentery()
+    {
+        return currentBuffs[Buff.Dysentery] > 0;
+    }
+
 }
