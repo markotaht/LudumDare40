@@ -187,7 +187,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1755822229174118}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.12}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 4559184013594034}
@@ -588,8 +588,8 @@ MonoBehaviour:
   DeathFade: {fileID: 0}
   deathMenu: {fileID: 0}
   _debuffs:
-  - {fileID: 21300000, guid: f82ca6f0e35824a4db93f999a257207b, type: 3}
-  - {fileID: 21300000, guid: c0837b666df56d74b967a88efaa75b9b, type: 3}
+  - {fileID: 21300000, guid: 068d2891ebafe5b49bea2ba22082e885, type: 3}
+  - {fileID: 21300000, guid: 860c4b379d8615d40893c14ff09b1a24, type: 3}
   _operations:
   - {fileID: 21300000, guid: 91e76f415c6df7d4a94b819485e01a5c, type: 3}
   - {fileID: 21300000, guid: 735598e85700c534e80d8b709c8b88f2, type: 3}
