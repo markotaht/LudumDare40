@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         _direction *= playerStats._speed;
         controller.Move(_direction * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
             _attacking = true;
             Invoke("StopAttack", 0.1f);
