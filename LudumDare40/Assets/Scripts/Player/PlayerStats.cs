@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour {
 
     private string _cause;
 
-    private bool alive;
+    private bool alive = true;
 
     //Buffs
     public enum Buff { Slowed, Bleeding, Dysentery, Confusion};
@@ -246,6 +246,7 @@ public class PlayerStats : MonoBehaviour {
 
     private void FlipControls()
     {
+        Debug.Log("Confusion flip");
         GameManager.instance.Player.inverted = !GameManager.instance.Player.inverted;
     }
 
