@@ -14,6 +14,7 @@ public class DebuffUIController : MonoBehaviour {
     {
         _sprites.Add(PlayerStats.Buff.Bleeding, buffPics[0]);
         _sprites.Add(PlayerStats.Buff.Slowed, buffPics[1]);
+        _sprites.Add(PlayerStats.Buff.Dysentery, buffPics[2]);
     }
     public void SetBuff(PlayerStats.Buff debuff, int count, bool increase)
     {

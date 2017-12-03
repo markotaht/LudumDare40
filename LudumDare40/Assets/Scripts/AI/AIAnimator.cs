@@ -17,7 +17,7 @@ public class AIAnimator : MonoBehaviour {
     void Update()
     {
         _lastdirection = rb.velocity.normalized;
-        Debug.Log(_lastdirection);
+        //Debug.Log(_lastdirection);
         enemySprite.flipX = getDirection();
     }
 

@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour {
     public GameObject _damagePopup;
 
     //Buffs
-    public enum Buff { Slowed, Bleeding };
+    public enum Buff { Slowed, Bleeding, Dysentery};
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
 
     //Counters
@@ -37,6 +37,7 @@ public class PlayerStats : MonoBehaviour {
         //Add 0 of ALL buffs
         currentBuffs.Add(Buff.Slowed, 0);
         currentBuffs.Add(Buff.Bleeding, 0);
+        currentBuffs.Add(Buff.Dysentery, 0);
 
         _health = _maxhealth;
     }
@@ -80,15 +81,20 @@ public class PlayerStats : MonoBehaviour {
                 popup.SetSprites(_debuffs[1], _operations[0]);
                 //Add poisoned visual
             }
+            else if (buff == Buff.Dysentery)
+            {
+                popup.SetSprites(_debuffs[2], _operations[0]);
+                //Add poisoned visual
+            }
         }
 
-        DC.SetBuff(buff, currentBuffs[buff], true);
         //Update stats:
         if(buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
         {
             _speed *= 0.93f;
         }
         //Update UI or whatever
+        DC.SetBuff(buff, currentBuffs[buff], true);
     }
 
     public void RemoveBuff(Buff buff)
@@ -108,6 +114,11 @@ public class PlayerStats : MonoBehaviour {
             {
                 //Remove poisoned visual
                 popup.SetSprites(_debuffs[1], _operations[1]);
+            }
+            else if (buff == Buff.Dysentery)
+            {
+                //Remove poisoned visual
+                popup.SetSprites(_debuffs[2], _operations[1]);
             }
         }
         DC.SetBuff(buff, currentBuffs[buff], false);
