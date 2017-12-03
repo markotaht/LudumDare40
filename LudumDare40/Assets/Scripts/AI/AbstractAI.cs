@@ -12,6 +12,8 @@ public abstract class AbstractAI : MonoBehaviour {
     public float _health;
     public List<GameObject> drops;
 
+    [SerializeField] private EnemyHealthbar _hpBar;
+
 
     // Use this for initialization
     void Start () {
@@ -36,11 +38,11 @@ public abstract class AbstractAI : MonoBehaviour {
 
     private void UpdateHealth()
     {
+        _hpBar.UpdateFillAmount(_health / _maxhealth);
         if(_health <= 0)
         {
             Die();
         }
-        //Update UI
     }
 
     private void Die() {
