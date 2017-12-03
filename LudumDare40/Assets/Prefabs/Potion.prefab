@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475ee3993e756dd4abe7992bf1be90a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnParticle: {fileID: 1538782731294264, guid: 42d8b21271c6b0c48bd90dbf18e9fa07,
+    type: 2}
 --- !u!212 &212015456299528416
 SpriteRenderer:
   m_ObjectHideFlags: 1
