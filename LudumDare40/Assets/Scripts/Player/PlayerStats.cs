@@ -26,7 +26,7 @@ public class PlayerStats : MonoBehaviour {
     public GameObject _damagePopup;
 
     //Buffs
-    public enum Buff { Slowed, Bleeding, Dysentery};
+    public enum Buff { Slowed, Bleeding, Dysentery, Confusion};
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
 
     //Counters
@@ -34,6 +34,8 @@ public class PlayerStats : MonoBehaviour {
     private float bleedingCounterMax = 1;
     private float bleedingTimeoutCounter = 0;
     private float bleedingTimeoutCounterMax = 10;
+    private float confusionTimeoutCounter = 0;
+    private float confusionTimeoutCounterMax = 3;
 
     private void Start()
     {
@@ -41,6 +43,7 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs.Add(Buff.Slowed, 0);
         currentBuffs.Add(Buff.Bleeding, 0);
         currentBuffs.Add(Buff.Dysentery, 0);
+        currentBuffs.Add(Buff.Confusion, 0);
 
         _health = _maxhealth;
     }
@@ -50,6 +53,7 @@ public class PlayerStats : MonoBehaviour {
         //Counters
         bleedingCounter -= Time.deltaTime;
         bleedingTimeoutCounter -= Time.deltaTime;
+        confusionTimeoutCounter -= Time.deltaTime;
 
         //Effects
         if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
@@ -59,10 +63,15 @@ public class PlayerStats : MonoBehaviour {
         }
 
         //Timeouts
-        if(currentBuffs[Buff.Bleeding] > 0 && bleedingTimeoutCounter <= 0)
+        if (currentBuffs[Buff.Bleeding] > 0 && bleedingTimeoutCounter <= 0)
         {
             RemoveBuff(Buff.Bleeding);
             bleedingTimeoutCounter = bleedingTimeoutCounterMax;
+        }
+        if (currentBuffs[Buff.Confusion] > 0 && confusionTimeoutCounter <= 0)
+        {
+            RemoveBuff(Buff.Confusion);
+            confusionTimeoutCounter = confusionTimeoutCounterMax;
         }
     }
 
@@ -94,6 +103,11 @@ public class PlayerStats : MonoBehaviour {
             {
                 //Add dysentery visual
             }
+            else if (buff == Buff.Confusion)
+            {
+                FlipControls();
+                //Add dysentery visual
+            }
         }
         //For first AND existing buffs
         FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
@@ -111,9 +125,14 @@ public class PlayerStats : MonoBehaviour {
         {
             popup.SetSprites(_debuffs[2], _operations[0]);
         }
+        else if (buff == Buff.Confusion)
+        {
+            popup.SetSprites(_debuffs[3], _operations[0]);
+            confusionTimeoutCounter = confusionTimeoutCounterMax;
+        }
 
         //Update stats:
-        if(buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
+        if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
         {
             _speed *= 0.93f;
         }
@@ -140,6 +159,11 @@ public class PlayerStats : MonoBehaviour {
             {
                 //Remove dysentery visual
             }
+            else if (buff == Buff.Confusion)
+            {
+                //Remove dysentery visual
+                FlipControls();
+            }
         }
 
         FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
@@ -155,6 +179,10 @@ public class PlayerStats : MonoBehaviour {
         else if (buff == Buff.Dysentery)
         {
             popup.SetSprites(_debuffs[2], _operations[1]);
+        }
+        else if (buff == Buff.Confusion)
+        {
+            popup.SetSprites(_debuffs[3], _operations[1]);
         }
 
         DC.SetBuff(buff, currentBuffs[buff], false);
@@ -206,5 +234,11 @@ public class PlayerStats : MonoBehaviour {
             yield return null;
         }
         deathMenu.SetActive(true);
+    }
+
+    private void FlipControls()
+    {
+        Debug.Log("FLIP");
+        float verticalInput = Input.GetAxis("Vertical") * -1;
     }
 }
