@@ -154,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647464764624608}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.9125261, y: -0.08893961, z: -2.6702752}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4538305749509672}
@@ -170,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 1750250960662386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4130609581012184}
   m_RootOrder: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   _maxhealth: 100
   _health: 100
   drops: []
+  _sprite: {fileID: 212796523560096564}
   _hpBar: {fileID: 114807858309049390}
   _projectile: {fileID: 1509675070023646, guid: bbe2867f9049d5e4882b8bcc3cd24438,
     type: 2}

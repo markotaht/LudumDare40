@@ -168,7 +168,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340533481960860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.6882756, y: -1.0509096, z: 0.69388103}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4230716907049250}
@@ -352,6 +352,7 @@ MonoBehaviour:
   _health: 50
   drops:
   - {fileID: 1030500487757960, guid: 213f0df140ea03b439326937ba0ed03d, type: 2}
+  _sprite: {fileID: 212785111559097528}
   _hpBar: {fileID: 114970691253331358}
 --- !u!114 &114891579608554922
 MonoBehaviour:
@@ -364,7 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80eb11488ab93014bba33adb919431f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 54089281099961192}
 --- !u!114 &114905012141322500
 MonoBehaviour:
   m_ObjectHideFlags: 1
