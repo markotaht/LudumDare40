@@ -18,12 +18,14 @@ public class PlayerAttack : MonoBehaviour {
     public void AttackFront()
     {
         front.SetActive(true);
+        Debug.Log("Front");
         Invoke("DisableTriggers", 0.1f);
     }
 
     public void AttackBack()
     {
         down.SetActive(true);
+        Debug.Log("Back");
         Invoke("DisableTriggers", 0.1f);
     }
 
@@ -32,9 +34,11 @@ public class PlayerAttack : MonoBehaviour {
         if(player._lastdirection.x == 1)
         {
             right.SetActive(true);
+            Debug.Log("Attacking right");
             Invoke("DisableTriggers", 0.1f);
         } else {
             left.SetActive(true);
+            Debug.Log("Attacking left");
             Invoke("DisableTriggers", 0.1f);
         }
     }
