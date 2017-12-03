@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 
+    public GameObject tutorial;
+
 	public void QuitGame()
     {
         Application.Quit();
@@ -12,5 +14,15 @@ public class MenuController : MonoBehaviour {
     public void StarGame()
     {
         SceneManager.LoadScene("Main");
+    }
+
+    public void Tutorial()
+    {
+        tutorial.SetActive(true);
+    }
+
+    public void QuitTutorial()
+    {
+        tutorial.SetActive(false);
     }
 }
