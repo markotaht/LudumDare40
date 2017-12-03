@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4055592348636390}
   - component: {fileID: 65607492818170540}
-  - component: {fileID: 114171215003266552}
+  - component: {fileID: 114089707991201510}
   m_Layer: 0
   m_Name: Food
   m_TagString: Untagged
@@ -80,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914409839610774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25495213, y: -0.29722187, z: -2.6702752}
+  m_LocalPosition: {x: 0, y: -0.2595382, z: -2.6702752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4452567680769688}
@@ -130,7 +130,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114171215003266552
+--- !u!114 &114089707991201510
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1914409839610774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475ee3993e756dd4abe7992bf1be90a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 32b9dd0ff21ab5141a4e07a949ca6834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212198071269078616
