@@ -8,14 +8,9 @@ public class Door : MonoBehaviour {
     [SerializeField] private RoomController currentRoom;
 
 
-    private Animator animator;
+    [SerializeField]private Animator animator;
     //Until mobs can be killed
     private bool active = false;
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     public RoomController NextRoom
     {
@@ -29,6 +24,7 @@ public class Door : MonoBehaviour {
     {
         active = true;
         //Muuda ukse pilti/ava uks vms
+
         animator.SetTrigger("Open");
     }
 
