@@ -11,6 +11,7 @@ public class PlayerSounds : MonoBehaviour {
     AudioClip swingsound;
 	
     void Step(){
+        Debug.Log("Stepped (sound)");
         int index = Random.Range(0, 3);
         stepsound = footsteps[index];
         playerSound.GetComponent<AudioSource>();
@@ -19,6 +20,7 @@ public class PlayerSounds : MonoBehaviour {
     }
 
     void Swing() {
+        Debug.Log("Swing Sound");
         int index = Random.Range(0, 2);
         swingsound = attack[index];
         playerSound.GetComponent<AudioSource>();
