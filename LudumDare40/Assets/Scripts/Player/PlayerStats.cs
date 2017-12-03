@@ -49,8 +49,7 @@ public class PlayerStats : MonoBehaviour {
         //Effects
         if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
-            _health -= 0.1f * currentBuffs[Buff.Bleeding];
-            UpdateHealth();
+            OnHit(0.1f * currentBuffs[Buff.Bleeding]);
             bleedingCounter = 1;
         }
     }
