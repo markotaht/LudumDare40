@@ -16,7 +16,7 @@ public class PlayerSounds : MonoBehaviour {
         stepsound = footsteps[index];
         playerSound.GetComponent<AudioSource>();
         playerSound.clip = stepsound;
-        playerSound.PlayOneShot(swingsound, RNG());
+        playerSound.PlayOneShot(stepsound, RNG());
     }
 
     void Swing() {
