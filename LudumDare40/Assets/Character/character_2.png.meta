@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 7fcc57ae826a28e4ba7a1ebc3c8d4c30
-timeCreated: 1512307916
+guid: 00b0bbb02c394ba49a8fe1fd3fd68128
+timeCreated: 1512307773
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: fly_0
-    21300002: fly_1
+    21300000: character_2_0
+    21300002: character_2_1
+    21300004: character_2_2
+    21300006: character_2_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -80,29 +82,57 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fly_0
+      name: character_2_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 24
-        width: 290
-        height: 256
+        y: 1
+        width: 249
+        height: 436
       alignment: 9
-      pivot: {x: 0.6, y: 0.4}
+      pivot: {x: 0.3, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: fly_1
+      name: character_2_1
       rect:
         serializedVersion: 2
-        x: 293
-        y: 0
-        width: 175
-        height: 280
+        x: 252
+        y: 2
+        width: 252
+        height: 435
       alignment: 9
-      pivot: {x: 0.5853006, y: 0.35750976}
+      pivot: {x: 0.3, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_2_2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1
+        width: 249
+        height: 436
+      alignment: 9
+      pivot: {x: 0.3, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: character_2_3
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 2
+        width: 248
+        height: 435
+      alignment: 9
+      pivot: {x: 0.3, y: 0.55}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
