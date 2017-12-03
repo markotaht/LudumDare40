@@ -19,6 +19,14 @@ public class RoomController : MonoBehaviour {
         }
     }
 
+    private void OnEnable()
+    {
+        if (MobCount == 0)
+        {
+            DecreaseMobCounter(0);
+        }
+    }
+
     public void Load(RoomController previousRoom) {
 
         foreach(Door s in doors)

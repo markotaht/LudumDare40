@@ -336,7 +336,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1237560391428644}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b73318dfacebbf843b3e88564688d60d, type: 2}
   m_CullingMode: 0
@@ -359,3 +359,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextRoom: {fileID: 0}
   currentRoom: {fileID: 0}
+  animator: {fileID: 95174665990209800}
