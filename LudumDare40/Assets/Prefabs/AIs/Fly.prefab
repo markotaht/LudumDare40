@@ -117,8 +117,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647464764624608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.8410747, y: 0.04118816, z: 7.508789}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 224587186837105236}
@@ -220,7 +220,7 @@ MonoBehaviour:
   _damage: 0.5
   _range: 1
   _maxhealth: 100
-  _health: 0
+  _health: 100
   drops: []
   _projectile: {fileID: 1509675070023646, guid: bbe2867f9049d5e4882b8bcc3cd24438,
     type: 2}
@@ -259,7 +259,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 5cb7db50a4d4c4e42ba0e9c45f38ffc8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -312,7 +312,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300180, guid: 2d23f22e13b72ad45b04c83cec0167d8, type: 3}
+  m_Sprite: {fileID: 21300100, guid: 1c387ea7f56b56444afd42ca821cf6d8, type: 3}
   m_Color: {r: 0.38291547, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -355,16 +355,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1928444364863646}
   m_LocalRotation: {x: 0.6087604, y: -0, z: -0, w: 0.7933541}
-  m_LocalPosition: {x: -0.0009999275, y: 0, z: 0.333}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -0.0009999275, y: 2.41, z: -0.066}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.4}
   m_Children: []
   m_Father: {fileID: 224587186837105236}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.001, y: 0}
-  m_SizeDelta: {x: 5.1071, y: 0.4344}
+  m_AnchoredPosition: {x: -0.001, y: 2.41}
+  m_SizeDelta: {x: 5.107, y: 1.115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224587186837105236
 RectTransform:

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void SetPlayerLocation(Vector3 position)
     {
-        _player.transform.position = position + _player._lastdirection.normalized * 0.2f;
+        _player.transform.position = position + _player._lastdirection.normalized * 0.4f;
     }
 
 }

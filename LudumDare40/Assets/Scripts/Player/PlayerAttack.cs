@@ -29,7 +29,7 @@ public class PlayerAttack : MonoBehaviour {
 
     public void AttackSide()
     {
-        if(player._direction.x == 1)
+        if(player._lastdirection.x == 1)
         {
             right.SetActive(true);
             Invoke("DisableTriggers", 0.1f);
