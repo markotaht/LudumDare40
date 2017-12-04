@@ -8,10 +8,21 @@ public class Princess : MonoBehaviour {
     [SerializeField] private Image winFade;
     [SerializeField] private GameObject winText;
     private PlayerStats _playerStats;
+    public GameObject _ufo;
+    public GameObject _rat;
+    private bool ratInScene = false;
 
 	// Use this for initialization
 	void Start () {
-		if(Random.Range(0, 100) < 50)
+        float r = Random.Range(0, 100);
+        if(r < 5)
+        {
+            //_rat.SetActive(true);
+            Instantiate(_rat, transform);
+            ratInScene = true;
+            _princessSprite.SetActive(false);
+        }
+		else if(r < 50)
         {
             _princessSprite.SetActive(false);
         }
@@ -39,6 +50,7 @@ public class Princess : MonoBehaviour {
         bool success;
         string message;
         WinMessage(out success, out message);
+        if (message == "The princess wast abduct'd!") yield return new WaitForSeconds(2);
         winText.GetComponentInChildren<Text>().text = message;
         winText.SetActive(true);
         if (!success)
@@ -57,6 +69,14 @@ public class Princess : MonoBehaviour {
     {
         if (_princessSprite.activeInHierarchy)
         {
+            if(Random.Range(0, 100) < 10)
+            {
+                //UFO
+                Instantiate(_ufo, transform.position, transform.rotation);
+                message = "The princess wast abduct'd!";
+                success = false;
+                return;
+            }
             if (_playerStats.HasDysentery())
             {
                 message = "The princess rejects thee because thee has't shat thyself.";
@@ -72,6 +92,11 @@ public class Princess : MonoBehaviour {
         else
         {
             success = false;
+            if (ratInScene)
+            {
+                message = "A wild rat princess hath appeareth!";
+                return;
+            }
             float random = Random.Range(0, 100);
             if(random < 50) 
                 message = "Th're is nay signeth of the princess.";

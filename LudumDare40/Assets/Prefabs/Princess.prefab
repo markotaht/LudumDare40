@@ -154,6 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _princessSprite: {fileID: 1311649607661402}
+  winFade: {fileID: 0}
+  winText: {fileID: 0}
+  _ufo: {fileID: 1434396954941290, guid: 32eb6ae889017654a8956a204c849433, type: 2}
+  _rat: {fileID: 1374770175530938, guid: 18c8fca97cd470f4ab79f28041524b88, type: 2}
 --- !u!212 &212165975016868134
 SpriteRenderer:
   m_ObjectHideFlags: 1
