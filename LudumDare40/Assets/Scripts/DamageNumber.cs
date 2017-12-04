@@ -10,11 +10,12 @@ public class DamageNumber : MonoBehaviour {
     public void SetDamageNumber(float number)
     {
         damagenumber.text = number.ToString();
-        if(number > 0)
+        damagenumber.GetComponent<Text>().color = Color.red;
+        if (number > 0)
         {
 
             Debug.Log("before: " + damagenumber.color);
-            damagenumber.color = Color.red;
+            damagenumber.GetComponent<Text>().color = Color.green;
             Debug.Log("after: " + damagenumber.color);
             damagenumber.text = "+" + number.ToString();
         }
