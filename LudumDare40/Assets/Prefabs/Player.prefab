@@ -118,6 +118,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1619667791989178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4753486374702428}
+  m_Layer: 9
+  m_Name: blood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1755822229174118
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,8 +292,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119419516000862}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.615, y: 0.248, z: 0}
+  m_LocalRotation: {x: -0.70710677, y: -0, z: -0, w: 0.7071069}
+  m_LocalPosition: {x: -2.3269997, y: -0.29599994, z: -0.8379996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4081755535217718}
@@ -287,6 +302,7 @@ Transform:
   - {fileID: 4577724448647302}
   - {fileID: 4720339826624792}
   - {fileID: 4885553176236824}
+  - {fileID: 4753486374702428}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -328,6 +344,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4559184013594034}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4753486374702428
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1619667791989178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: -0.238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4559184013594034}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4857300705901772
 Transform:
@@ -454,7 +483,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3f10ada3a0398941b3a3f883bec469b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24fa9a75b108320428ae8b02cf44054f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -691,7 +720,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c5b0022477c4e8242ace540721cbf3f0, type: 3}
   - {fileID: 8300000, guid: bc067a9464967b54696ad22531bbcb6c, type: 3}
   attack:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 1b3a195ee38e76e4bbb417978773ea10, type: 3}
   playerSound: {fileID: 82898347274315164}
 --- !u!114 &114088699764803836
 MonoBehaviour:
@@ -810,6 +839,9 @@ MonoBehaviour:
   _damagePopup: {fileID: 1995425009489328, guid: 9b5ff38bd6db56447a2abf8c6ce4d45b,
     type: 2}
   confusionVisual: {fileID: 1763645408125620}
+  bloodPool: {fileID: 1492513708252036, guid: 8674f171e1a9e9a4c8486b111ff5832b, type: 2}
+  bloodPoolLoc: {fileID: 4753486374702428}
+  si: {fileID: 0}
   alive: 1
   endings: 0000000000000000000000
   savedEndings: 0
