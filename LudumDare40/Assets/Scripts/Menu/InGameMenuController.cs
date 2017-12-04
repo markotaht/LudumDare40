@@ -7,10 +7,16 @@ using UnityEngine.UI;
 public class InGameMenuController : MonoBehaviour {
 
     [SerializeField] private GameObject menuPanel;
+    [SerializeField] private GameObject debuff;
+    [SerializeField] private GameObject health;
+    [SerializeField] private GameObject panel;
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            debuff.SetActive(!debuff.activeInHierarchy);
+            health.SetActive(!health.activeInHierarchy);
+            panel.SetActive(!panel.activeInHierarchy);
             menuPanel.SetActive(!menuPanel.activeInHierarchy);
             if (menuPanel.activeInHierarchy)
             {
@@ -25,6 +31,9 @@ public class InGameMenuController : MonoBehaviour {
 
     public void Resume()
     {
+        debuff.SetActive(true);
+        health.SetActive(true);
+        panel.SetActive(true);
         menuPanel.SetActive(false);
         Time.timeScale = 1;
     }
