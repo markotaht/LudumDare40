@@ -10,13 +10,17 @@ public class Food : MonoBehaviour
         PlayerStats playerStats = other.GetComponent<PlayerStats>();
         if (playerStats)
         {
-            if (Random.Range(0, 100) < 50)
+            int val = Random.Range(0, 100);
+            if (val < 33)
                 playerStats.AddBuff(PlayerStats.Buff.Dysentery);
-            playerStats.AddBuff(PlayerStats.Buff.Weakness);
-        }
-        else
-        {
-            playerStats.Heal(20);
+            else if(val < 66)
+            {
+                playerStats.AddBuff(PlayerStats.Buff.Weakness);
+            }
+            else
+            {
+                playerStats.Heal(20);
+            }
             Destroy(gameObject);
         }
     }
