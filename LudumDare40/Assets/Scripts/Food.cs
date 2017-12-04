@@ -17,5 +17,3 @@ public class Food : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-
-}
