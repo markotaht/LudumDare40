@@ -810,7 +810,8 @@ MonoBehaviour:
   _damagePopup: {fileID: 1995425009489328, guid: 9b5ff38bd6db56447a2abf8c6ce4d45b,
     type: 2}
   confusionVisual: {fileID: 1763645408125620}
-  endings: 00000000000000000000
+  alive: 1
+  endings: 0000000000000000000000
   savedEndings: 0
 --- !u!114 &114796792985107376
 MonoBehaviour:
