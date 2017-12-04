@@ -53,9 +53,11 @@ public class Princess : MonoBehaviour {
         if (message == "The princess wast abduct'd!") yield return new WaitForSeconds(2);
         winText.GetComponentInChildren<Text>().text = message;
         winText.SetActive(true);
+        _playerStats.UpdateEndingScore();
         if (!success)
         {
             winText.GetComponentInChildren<Text>().color = Color.white;
+            _playerStats.ColorEndingScore(Color.white);
             winFade.color = new Color(0, 0, 0, 0);
         }
         while (winFade.color.a < 0.99)
@@ -75,16 +77,19 @@ public class Princess : MonoBehaviour {
                 Instantiate(_ufo, transform.position, transform.rotation);
                 message = "The princess wast abduct'd!";
                 success = false;
+                _playerStats.endings[4] = true;
                 return;
             }
             if (_playerStats.HasDysentery())
             {
                 message = "The princess rejects thee because thee has't shat thyself.";
+                _playerStats.endings[5] = true;
                 success = false;
             }
             else
             {
                 message = "Thou art in luck, h'r highness likes thee!";
+                _playerStats.endings[6] = true;
                 success = true;
             }
 
@@ -95,13 +100,21 @@ public class Princess : MonoBehaviour {
             if (ratInScene)
             {
                 message = "A wild rat princess hath appeareth!";
+                _playerStats.endings[7] = true;
                 return;
             }
             float random = Random.Range(0, 100);
-            if(random < 50) 
+            if(random < 50)
+            {
                 message = "Th're is nay signeth of the princess.";
+                _playerStats.endings[8] = true;
+            }
             else
+            {
                 message = "Thy princess is in anoth'r castle.";
+                _playerStats.endings[9] = true;
+            }
+                
         }
     }
 }
