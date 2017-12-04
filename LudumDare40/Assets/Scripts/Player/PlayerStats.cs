@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour {
     private bool alive = true;
 
     //Buffs
-    public enum Buff { Slowed, Bleeding, Dysentery, Confusion};
+    public enum Buff { Slowed, Bleeding, Dysentery, Confusion, Weakness};
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
 
     //Counters
@@ -48,6 +48,7 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs.Add(Buff.Bleeding, 0);
         currentBuffs.Add(Buff.Dysentery, 0);
         currentBuffs.Add(Buff.Confusion, 0);
+        currentBuffs.Add(Buff.Weakness, 0);
 
         _health = _maxhealth;
     }
@@ -121,6 +122,10 @@ public class PlayerStats : MonoBehaviour {
                 FlipControls();
                 //Add dysentery visual
             }
+            else if (buff == Buff.Weakness)
+            {
+                //weakness;
+            }
         }
         //For first AND existing buffs
         FloatingBuff popup = Instantiate(_popup, _popupTransform).GetComponent<FloatingBuff>();
@@ -143,11 +148,20 @@ public class PlayerStats : MonoBehaviour {
             popup.SetSprites(_debuffs[3], _operations[0]);
             confusionTimeoutCounter = confusionTimeoutCounterMax;
         }
+        else if (buff == Buff.Weakness)
+        {
+            popup.SetSprites(_debuffs[4], _operations[0]);
+        }
 
         //Update stats:
         if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] <= 10)
         {
             _speed *= 0.93f;
+        }
+
+        else if (buff == Buff.Weakness && currentBuffs[Buff.Slowed] < 5)
+        {
+            _damage /= 0.9f;
         }
         //Update UI or whatever
         DC.SetBuff(buff, currentBuffs[buff], true);
@@ -197,12 +211,20 @@ public class PlayerStats : MonoBehaviour {
         {
             popup.SetSprites(_debuffs[3], _operations[1]);
         }
+        else if (buff == Buff.Weakness)
+        {
+            popup.SetSprites(_debuffs[4], _operations[1]);
+        }
 
         DC.SetBuff(buff, currentBuffs[buff], false);
         //Update stats:
         if (buff == Buff.Slowed && currentBuffs[Buff.Slowed] < 10)
         {
             _speed /= 0.93f;
+        }
+        else if (buff == Buff.Weakness && currentBuffs[Buff.Slowed] < 5)
+        {
+            _damage /= 0.9f;
         }
         //Update UI or whatever
     }
