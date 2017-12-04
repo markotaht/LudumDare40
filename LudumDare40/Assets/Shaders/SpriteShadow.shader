@@ -36,6 +36,7 @@
 			o.Alpha = c.a;
 			clip(o.Alpha - _Cutoff);
 		}
+
 		ENDCG
 	}
 	FallBack "Diffuse"
