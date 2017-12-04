@@ -5,6 +5,7 @@ using UnityEngine;
 public class Potion : MonoBehaviour {
 
     public GameObject spawnParticle;
+    public AudioClip pickup;
 
     private void OnEnable()
     {
@@ -17,7 +18,9 @@ public class Potion : MonoBehaviour {
         Instantiate(spawnParticle, transform.position, Quaternion.identity);
         if (playerStats)
         {
-            if(Random.Range(0, 100) < 60)
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(pickup);
+            if (Random.Range(0, 100) < 60)
             {
                 playerStats.RemoveRandomBuff();
             }
@@ -25,7 +28,12 @@ public class Potion : MonoBehaviour {
             {
                 playerStats.AddRandomBuff();
             }
-            Destroy(gameObject);
+            Invoke("Destroy", 0.5f);
         }
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
