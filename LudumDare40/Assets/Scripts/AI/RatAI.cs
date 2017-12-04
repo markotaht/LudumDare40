@@ -15,6 +15,9 @@ public class RatAI : AbstractAI {
         _player.GetComponent<PlayerStats>().OnHit(_damage,"Rat");
         if(Random.Range(0, 100) < 25)
         {
+            _player.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Weakness);
+        } else
+        {
             _player.GetComponent<PlayerStats>().AddBuff(PlayerStats.Buff.Bleeding);
         }
     }
