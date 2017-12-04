@@ -31,6 +31,9 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject confusionVisual;
 
+    public GameObject bloodPool;
+    public Transform bloodPoolLoc;
+
     private string _cause;
 
     public bool alive = true;
@@ -75,6 +78,7 @@ public class PlayerStats : MonoBehaviour
         //Effects
         if (currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
+            Instantiate(bloodPool, bloodPoolLoc.position,bloodPoolLoc.rotation, GameManager.instance.CurrentRoom.transform);
             OnHit(0.1f * currentBuffs[Buff.Bleeding], "bleeding");
             bleedingCounter = bleedingCounterMax;
         }
