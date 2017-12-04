@@ -89,6 +89,13 @@ public class PlayerStats : MonoBehaviour {
         UpdateHealth();
     }
 
+    public void Heal(float health)
+    {
+        _health = Mathf.Min(_health + health, _maxhealth);
+        DamageNumber dn = Instantiate(_damagePopup, _popupTransform).GetComponent<DamageNumber>();
+        dn.SetDamageNumber(health);
+    }
+
     public void AddBuff(Buff buff)
     {
         Debug.Log("Added " + buff);
