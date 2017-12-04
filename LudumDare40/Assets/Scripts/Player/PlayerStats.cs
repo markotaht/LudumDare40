@@ -34,6 +34,8 @@ public class PlayerStats : MonoBehaviour
     public GameObject bloodPool;
     public Transform bloodPoolLoc;
 
+    public SicknessIndicator si;
+
     private string _cause;
 
     public bool alive = true;
@@ -120,6 +122,7 @@ public class PlayerStats : MonoBehaviour
         //Only for new buff
         if (currentBuffs[buff] == 1)
         {
+            si.IncreaseLevel();
             //Add visuals:
             if (buff == Buff.Bleeding)
             {
@@ -190,6 +193,7 @@ public class PlayerStats : MonoBehaviour
         currentBuffs[buff] -= 1;
         if (currentBuffs[buff] == 0)
         {
+            si.DecreaseLevel();
             //Remove visuals:
             if (buff == Buff.Bleeding)
             {
