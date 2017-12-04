@@ -10,6 +10,14 @@ public class DamageNumber : MonoBehaviour {
     public void SetDamageNumber(float number)
     {
         damagenumber.text = number.ToString();
+        if(number > 0)
+        {
+
+            Debug.Log("before: " + damagenumber.color);
+            damagenumber.color = Color.red;
+            Debug.Log("after: " + damagenumber.color);
+            damagenumber.text = "+" + number.ToString();
+        }
     }
 
     public void Disappear()
