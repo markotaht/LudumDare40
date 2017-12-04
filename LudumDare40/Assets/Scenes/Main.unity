@@ -4744,12 +4744,12 @@ Prefab:
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 398
+      value: 526.5
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 224
+      value: 297
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
@@ -9828,11 +9828,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114730211923336230, guid: ad14ba26d0e31e44da61575a948615f6,
-        type: 2}
-      propertyPath: _debuffs.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4559184013594034, guid: ad14ba26d0e31e44da61575a948615f6, type: 2}
       propertyPath: m_LocalPosition.x
       value: -2.3269997
@@ -9885,32 +9880,6 @@ Prefab:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 845451111}
-    - target: {fileID: 4559184013594034, guid: ad14ba26d0e31e44da61575a948615f6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4559184013594034, guid: ad14ba26d0e31e44da61575a948615f6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114730211923336230, guid: ad14ba26d0e31e44da61575a948615f6,
-        type: 2}
-      propertyPath: _debuffs.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 8fbd10338ad6f524f904636291f5d93d,
-        type: 3}
-    - target: {fileID: 114730211923336230, guid: ad14ba26d0e31e44da61575a948615f6,
-        type: 2}
-      propertyPath: _debuffs.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: ca79b4991f13269468b9e4895b71f7cf,
-        type: 3}
-    - target: {fileID: 114730211923336230, guid: ad14ba26d0e31e44da61575a948615f6,
-        type: 2}
-      propertyPath: _debuffs.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: 5ce09ee6530980c44ace9aa817d52d3a,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad14ba26d0e31e44da61575a948615f6, type: 2}
   m_IsPrefabParent: 0
@@ -10219,23 +10188,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4634714717840306, guid: a127a3f5738b7e44b8f98abbc13b0117,
     type: 2}
   m_PrefabInternal: {fileID: 1726135282}
---- !u!1 &1733353309 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1296728790344664, guid: ad14ba26d0e31e44da61575a948615f6,
-    type: 2}
-  m_PrefabInternal: {fileID: 1664235607}
---- !u!114 &1733353316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1733353309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 72e693a76ed1bf64d86f407d1f6fce3b, type: 2}
 --- !u!1 &1765107295
 GameObject:
   m_ObjectHideFlags: 0
