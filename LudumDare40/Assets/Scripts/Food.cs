@@ -12,7 +12,8 @@ public class Food : MonoBehaviour {
             if (Random.Range(0, 100) < 50)
                 playerStats.AddBuff(PlayerStats.Buff.Dysentery);
                 playerStats.AddBuff(PlayerStats.Buff.Weakness);
-        } else playerStats.Heal(20);
+        } else{
+            playerStats.Heal(20);
             Destroy(gameObject);
         }
     }
