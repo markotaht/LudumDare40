@@ -500,12 +500,12 @@ Prefab:
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 369
+      value: 598.5
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 297
+      value: 287.5
       objectReference: {fileID: 0}
     - target: {fileID: 224103025918841644, guid: 6e14c1fd8378c5040991f12710e1060d,
         type: 2}
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &968012440 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114487733700090906, guid: 6e14c1fd8378c5040991f12710e1060d,
+  m_PrefabParentObject: {fileID: 114825143017917114, guid: 6e14c1fd8378c5040991f12710e1060d,
     type: 2}
   m_PrefabInternal: {fileID: 968012438}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
