@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
+    public GameObject spawnParticle;
+    public AudioClip pickup;
+
+    private void OnEnable()
+    {
+        Instantiate(spawnParticle, transform.position, Quaternion.identity);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         PlayerStats playerStats = other.GetComponent<PlayerStats>();
         if (playerStats)
         {
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.PlayOneShot(pickup);
             int val = Random.Range(0, 100);
             if (val < 33)
                 playerStats.AddBuff(PlayerStats.Buff.Dysentery);
@@ -21,7 +30,12 @@ public class Food : MonoBehaviour
             {
                 playerStats.Heal(20);
             }
-            Destroy(gameObject);
+            Invoke("Destroy", 0.5f);
         }
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
