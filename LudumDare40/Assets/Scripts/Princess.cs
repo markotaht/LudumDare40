@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Princess : MonoBehaviour {
+public class Princess : MonoBehaviour
+{
     public GameObject _princessSprite;
     [SerializeField] private Image winFade;
     [SerializeField] private GameObject winText;
@@ -12,26 +13,28 @@ public class Princess : MonoBehaviour {
     public GameObject _rat;
     private bool ratInScene = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         float r = Random.Range(0, 100);
-        if(r < 5)
+        if (r < 5)
         {
             //_rat.SetActive(true);
             Instantiate(_rat, transform);
             ratInScene = true;
             _princessSprite.SetActive(false);
         }
-		else if(r < 50)
+        else if (r < 50)
         {
             _princessSprite.SetActive(false);
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -71,7 +74,7 @@ public class Princess : MonoBehaviour {
     {
         if (_princessSprite.activeInHierarchy)
         {
-            if(Random.Range(0, 100) < 10)
+            if (Random.Range(0, 100) < 10)
             {
                 //UFO
                 Instantiate(_ufo, transform.position, transform.rotation);

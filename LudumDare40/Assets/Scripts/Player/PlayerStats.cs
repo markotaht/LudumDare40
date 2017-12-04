@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class PlayerStats : MonoBehaviour {
+public class PlayerStats : MonoBehaviour
+{
 
     [SerializeField] public float _speed;
     [SerializeField] public float _damage;
@@ -36,7 +37,7 @@ public class PlayerStats : MonoBehaviour {
     public int savedEndings = 0;
 
     //Buffs
-    public enum Buff { Slowed, Bleeding, Dysentery, Confusion, Weakness};
+    public enum Buff { Slowed, Bleeding, Dysentery, Confusion, Weakness };
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
 
     //Counters
@@ -70,7 +71,7 @@ public class PlayerStats : MonoBehaviour {
         confusionTimeoutCounter -= Time.deltaTime;
 
         //Effects
-        if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
+        if (currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
             OnHit(0.1f * currentBuffs[Buff.Bleeding], "bleeding");
             bleedingCounter = bleedingCounterMax;
@@ -110,14 +111,14 @@ public class PlayerStats : MonoBehaviour {
         Debug.Log("Added " + buff);
         currentBuffs[buff] += 1;
         //Only for new buff
-        if(currentBuffs[buff] == 1)
+        if (currentBuffs[buff] == 1)
         {
             //Add visuals:
-            if(buff == Buff.Bleeding)
+            if (buff == Buff.Bleeding)
             {
                 //Add bleeding visual
             }
-            else if(buff == Buff.Slowed)
+            else if (buff == Buff.Slowed)
             {
                 //Add slowed visual
             }
@@ -246,7 +247,7 @@ public class PlayerStats : MonoBehaviour {
     {
         System.Random r = new System.Random();
         List<Buff> presentBuffs = currentBuffs.Where(p => p.Value > 0).Select(p => p.Key).ToList();
-        if(presentBuffs.Count != 0)
+        if (presentBuffs.Count != 0)
         {
             RemoveBuff(presentBuffs[r.Next(presentBuffs.Count)]);
         }
@@ -258,10 +259,10 @@ public class PlayerStats : MonoBehaviour {
 
     private void UpdateHealth()
     {
-        if(_healthBar != null)
+        if (_healthBar != null)
         {
             _healthBar.fillAmount = _health / _maxhealth;
-            if(_health <= 0)
+            if (_health <= 0)
             {
                 alive = false;
                 StartCoroutine(DeathScreen());
@@ -290,15 +291,19 @@ public class PlayerStats : MonoBehaviour {
 
     private string DeathMessage()
     {
-        if(_cause == "bleeding")
+        if (_cause == "bleeding")
         {
             endings[0] = true;
             return "Thou has't  bled to death ";
-        }else if(_cause == "Rat")
+        }
+        else if (_cause == "Rat")
         {
             endings[1] = true;
             return "Thee wast killeth by a rat";
-        }else if(_cause == "Fly"){
+        }
+        else if (_cause == "Fly")
+        {
+            endings[2] = true;
             endings[2] = true;
             return "Thee hath kicked the bucket from flyes... ";
         }
