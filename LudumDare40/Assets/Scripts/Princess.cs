@@ -12,8 +12,10 @@ public class Princess : MonoBehaviour
     public GameObject _ufo;
     public GameObject _rat;
     public GameObject _alien;
+    public GameObject _guy;
     private bool ratInScene = false;
     private bool alienInScene = false;
+    private bool guyInScene = false;
 
     // Use this for initialization
     void Start()
@@ -26,11 +28,22 @@ public class Princess : MonoBehaviour
             ratInScene = true;
             _princessSprite.SetActive(false);
         }
-        else if(r < 10)
+        else if (r < 10)
         {
             Instantiate(_alien, transform);
             alienInScene = true;
             _princessSprite.SetActive(false);
+        }
+        else if (r < 15)
+        {
+            Instantiate(_guy, transform);
+            guyInScene = true;
+            _princessSprite.SetActive(false);
+        }
+        else if (r < 20)
+        {
+            Instantiate(_guy, transform.position + new Vector3(1, 0, 0), transform.rotation);
+            guyInScene = true;
         }
         else if (r < 60)
         {
@@ -84,6 +97,13 @@ public class Princess : MonoBehaviour
     {
         if (_princessSprite.activeInHierarchy)
         {
+            if (guyInScene)
+            {
+                message = "Anoth'r lad hast taken thy prize";
+                success = false;
+                _playerStats.endings[11] = true;
+                return;
+            }
             if (Random.Range(0, 100) < 10)
             {
                 //UFO
@@ -121,6 +141,12 @@ public class Princess : MonoBehaviour
                 message = "Thee w're abduct'd by a green sir!";
                 Debug.Log(_playerStats.endings.Count);
                 _playerStats.endings[10] = true;
+                return;
+            }
+            else if (guyInScene)
+            {
+                message = "Wouldst has't pref'rr'd a mistress";
+                _playerStats.endings[12] = true;
                 return;
             }
             float random = Random.Range(0, 100);

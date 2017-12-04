@@ -40,7 +40,7 @@ public class PlayerStats : MonoBehaviour
 
     public bool alive = true;
 
-    public List<bool> endings = new List<bool>(new bool[11]);
+    public List<bool> endings = new List<bool>(new bool[13]);
     public int savedEndings = 0;
 
     //Buffs
