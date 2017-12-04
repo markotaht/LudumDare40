@@ -843,7 +843,7 @@ MonoBehaviour:
   bloodPoolLoc: {fileID: 4753486374702428}
   si: {fileID: 0}
   alive: 1
-  endings: 0000000000000000000000
+  endings: 00000000000000000000000000
   savedEndings: 0
 --- !u!114 &114796792985107376
 MonoBehaviour:
