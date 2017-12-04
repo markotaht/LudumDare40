@@ -31,6 +31,8 @@ public class Trap : MonoBehaviour {
         {
             enabled = true;
             playerStats.AddBuff(_buff);
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
         }
     }
     private void OnTriggerExit(Collider other)
