@@ -94,6 +94,7 @@ public class PlayerStats : MonoBehaviour
 
     public void OnHit(float damage, string cause)
     {
+        if (!alive) return;
         _cause = cause;
         _health -= damage;
         DamageNumber dn = Instantiate(_damagePopup, _popupTransform).GetComponent<DamageNumber>();
