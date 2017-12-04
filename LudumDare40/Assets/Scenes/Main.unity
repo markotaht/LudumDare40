@@ -9916,6 +9916,16 @@ Prefab:
       propertyPath: deathEndingScore
       value: 
       objectReference: {fileID: 1510544680}
+    - target: {fileID: 82861441272179502, guid: ad14ba26d0e31e44da61575a948615f6,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 24fa9a75b108320428ae8b02cf44054f, type: 3}
+    - target: {fileID: 114009256673719992, guid: ad14ba26d0e31e44da61575a948615f6,
+        type: 2}
+      propertyPath: attack.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b3a195ee38e76e4bbb417978773ea10, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad14ba26d0e31e44da61575a948615f6, type: 2}
   m_IsPrefabParent: 0
@@ -11366,6 +11376,25 @@ Transform:
   m_PrefabParentObject: {fileID: 4612475283708576, guid: 729d6377ec399a948bd8ba3e7d5979a2,
     type: 2}
   m_PrefabInternal: {fileID: 1970944918}
+--- !u!1 &1975500709 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1483364496692894, guid: 9ee0f6b23cd35974ebb232b238c9a385,
+    type: 2}
+  m_PrefabInternal: {fileID: 865754118}
+--- !u!64 &1975500713
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975500709}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300016, guid: 6caf8384d841e464797c4737738e3e96, type: 3}
 --- !u!1 &1977486001
 GameObject:
   m_ObjectHideFlags: 0

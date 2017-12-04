@@ -33,7 +33,7 @@ public class PlayerStats : MonoBehaviour
 
     private string _cause;
 
-    private bool alive = true;
+    public bool alive = true;
 
     public List<bool> endings = new List<bool>(new bool[11]);
     public int savedEndings = 0;
@@ -94,6 +94,7 @@ public class PlayerStats : MonoBehaviour
 
     public void OnHit(float damage, string cause)
     {
+        if (!alive) return;
         _cause = cause;
         _health -= damage;
         DamageNumber dn = Instantiate(_damagePopup, _popupTransform).GetComponent<DamageNumber>();

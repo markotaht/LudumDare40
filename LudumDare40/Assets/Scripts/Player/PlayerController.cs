@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        if (!playerStats.alive) return;
         idleTimer += Time.deltaTime;
         _H = Input.GetAxisRaw("Horizontal");
         _V = Input.GetAxisRaw("Vertical");

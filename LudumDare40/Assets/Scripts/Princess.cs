@@ -57,6 +57,8 @@ public class Princess : MonoBehaviour
 
     public IEnumerator WinScreen()
     {
+        _playerStats.alive = false;
+
         winFade.gameObject.SetActive(true);
         bool success;
         string message;
