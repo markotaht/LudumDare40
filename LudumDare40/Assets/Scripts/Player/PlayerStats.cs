@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class PlayerStats : MonoBehaviour {
+public class PlayerStats : MonoBehaviour
+{
 
     [SerializeField] public float _speed;
     [SerializeField] public float _damage;
@@ -18,6 +19,9 @@ public class PlayerStats : MonoBehaviour {
     public Image DeathFade;
     public GameObject deathMenu;
 
+    public Text winEndingScore;
+    public Text deathEndingScore;
+
     public Sprite[] _debuffs;
     public Sprite[] _operations;
     public GameObject _popup;
@@ -29,8 +33,11 @@ public class PlayerStats : MonoBehaviour {
 
     private bool alive = true;
 
+    public List<bool> endings = new List<bool>(new bool[10]);
+    public int savedEndings = 0;
+
     //Buffs
-    public enum Buff { Slowed, Bleeding, Dysentery, Confusion, Weakness};
+    public enum Buff { Slowed, Bleeding, Dysentery, Confusion, Weakness };
     private Dictionary<Buff, int> currentBuffs = new Dictionary<Buff, int>();
 
     //Counters
@@ -51,6 +58,8 @@ public class PlayerStats : MonoBehaviour {
         currentBuffs.Add(Buff.Weakness, 0);
 
         _health = _maxhealth;
+
+        UpdateEndingScore();
     }
 
     private void Update()
@@ -62,7 +71,7 @@ public class PlayerStats : MonoBehaviour {
         confusionTimeoutCounter -= Time.deltaTime;
 
         //Effects
-        if(currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
+        if (currentBuffs[Buff.Bleeding] > 0 && bleedingCounter <= 0)
         {
             OnHit(0.1f * currentBuffs[Buff.Bleeding], "bleeding");
             bleedingCounter = bleedingCounterMax;
@@ -102,14 +111,14 @@ public class PlayerStats : MonoBehaviour {
         Debug.Log("Added " + buff);
         currentBuffs[buff] += 1;
         //Only for new buff
-        if(currentBuffs[buff] == 1)
+        if (currentBuffs[buff] == 1)
         {
             //Add visuals:
-            if(buff == Buff.Bleeding)
+            if (buff == Buff.Bleeding)
             {
                 //Add bleeding visual
             }
-            else if(buff == Buff.Slowed)
+            else if (buff == Buff.Slowed)
             {
                 //Add slowed visual
             }
@@ -238,7 +247,7 @@ public class PlayerStats : MonoBehaviour {
     {
         System.Random r = new System.Random();
         List<Buff> presentBuffs = currentBuffs.Where(p => p.Value > 0).Select(p => p.Key).ToList();
-        if(presentBuffs.Count != 0)
+        if (presentBuffs.Count != 0)
         {
             RemoveBuff(presentBuffs[r.Next(presentBuffs.Count)]);
         }
@@ -250,10 +259,10 @@ public class PlayerStats : MonoBehaviour {
 
     private void UpdateHealth()
     {
-        if(_healthBar != null)
+        if (_healthBar != null)
         {
             _healthBar.fillAmount = _health / _maxhealth;
-            if(_health <= 0)
+            if (_health <= 0)
             {
                 alive = false;
                 StartCoroutine(DeathScreen());
@@ -271,6 +280,7 @@ public class PlayerStats : MonoBehaviour {
         }
         deathMenu.GetComponentInChildren<Text>().text = DeathMessage();
         deathMenu.SetActive(true);
+        UpdateEndingScore();
     }
 
     private void FlipControls()
@@ -281,21 +291,56 @@ public class PlayerStats : MonoBehaviour {
 
     private string DeathMessage()
     {
-        if(_cause == "bleeding")
+        if (_cause == "bleeding")
         {
+            endings[0] = true;
             return "Thou has't  bled to death ";
-        }else if(_cause == "Rat")
+        }
+        else if (_cause == "Rat")
         {
+            endings[1] = true;
             return "Thee wast killeth by a rat";
-        }else if(_cause == "Fly"){
+        }
+        else if (_cause == "Fly")
+        {
+            endings[2] = true;
+            endings[2] = true;
             return "Thee hath kicked the bucket from flyes... ";
         }
+        endings[3] = true;
         return "Thee hath kicked the bucket of boredom";
     }
 
     public bool HasDysentery()
     {
         return currentBuffs[Buff.Dysentery] > 0;
+    }
+
+    public void UpdateEndingScore()
+    {
+        int seenEndings = 0;
+        for(int i = 0; i< endings.Count; i++)
+        {
+            int inPrefs = PlayerPrefs.GetInt(i.ToString());
+            if(endings[i] == true && inPrefs == 0)
+            {
+                PlayerPrefs.SetInt(i.ToString(), 1);
+                seenEndings++;
+            }
+            else if(inPrefs == 1)
+            {
+                seenEndings++;
+            }
+        }
+        Debug.Log("SeenEndings = " + endings.Where(p => p==true).ToList<bool>().Count + ", inprefs = " + seenEndings);
+        savedEndings = seenEndings;
+        winEndingScore.text = "Endings seen: " + seenEndings + "/" + endings.Count;
+        deathEndingScore.text = "Endings seen: " + seenEndings + "/" + endings.Count;
+    }
+
+    public void ColorEndingScore(Color color)
+    {
+        winEndingScore.color = color;
     }
 
 }
