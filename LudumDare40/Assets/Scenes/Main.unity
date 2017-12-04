@@ -11559,11 +11559,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 95174665990209800, guid: 9ee0f6b23cd35974ebb232b238c9a385,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114026546132737132, guid: 9ee0f6b23cd35974ebb232b238c9a385,
         type: 2}
       propertyPath: nextRoom
