@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour
 
     private string _cause;
 
-    private bool alive = true;
+    public bool alive = true;
 
     public List<bool> endings = new List<bool>(new bool[10]);
     public int savedEndings = 0;
