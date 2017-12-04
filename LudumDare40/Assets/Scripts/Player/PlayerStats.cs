@@ -29,6 +29,8 @@ public class PlayerStats : MonoBehaviour
 
     public GameObject _damagePopup;
 
+    public GameObject confusionVisual;
+
     private string _cause;
 
     public bool alive = true;
@@ -130,6 +132,7 @@ public class PlayerStats : MonoBehaviour
             {
                 FlipControls();
                 //Add dysentery visual
+                confusionVisual.SetActive(true);
             }
             else if (buff == Buff.Weakness)
             {
@@ -199,6 +202,7 @@ public class PlayerStats : MonoBehaviour
             {
                 //Remove dysentery visual
                 FlipControls();
+                confusionVisual.SetActive(false);
             }
         }
 
