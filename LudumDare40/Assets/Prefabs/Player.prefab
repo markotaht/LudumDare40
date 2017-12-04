@@ -746,6 +746,8 @@ MonoBehaviour:
   DC: {fileID: 0}
   DeathFade: {fileID: 0}
   deathMenu: {fileID: 0}
+  winEndingScore: {fileID: 0}
+  deathEndingScore: {fileID: 0}
   _debuffs:
   - {fileID: 21300000, guid: 141aea8947c08cf4fa86ffaca5eeb9fd, type: 3}
   - {fileID: 21300000, guid: db36fd054833921458e5a100bfa4a58c, type: 3}
@@ -759,6 +761,8 @@ MonoBehaviour:
   _popupTransform: {fileID: 4720339826624792}
   _damagePopup: {fileID: 1995425009489328, guid: 9b5ff38bd6db56447a2abf8c6ce4d45b,
     type: 2}
+  endings: 00000000000000000000
+  savedEndings: 0
 --- !u!114 &114796792985107376
 MonoBehaviour:
   m_ObjectHideFlags: 1
