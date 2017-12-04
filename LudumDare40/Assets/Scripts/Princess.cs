@@ -42,7 +42,7 @@ public class Princess : MonoBehaviour
         }
         else if (r < 20)
         {
-            Instantiate(_guy, transform.position + new Vector3(1, 0, 0), transform.rotation);
+            Instantiate(_guy, transform.position + new Vector3(0.2f, 0, 0), transform.rotation, transform);
             guyInScene = true;
         }
         else if (r < 60)

@@ -159,6 +159,7 @@ MonoBehaviour:
   _ufo: {fileID: 1434396954941290, guid: 32eb6ae889017654a8956a204c849433, type: 2}
   _rat: {fileID: 1374770175530938, guid: 18c8fca97cd470f4ab79f28041524b88, type: 2}
   _alien: {fileID: 1414756470643126, guid: f37c965a18126ff4c92f3cb339cfbc45, type: 2}
+  _guy: {fileID: 1444482109545062, guid: a6776b84e857e5349a2b8a7125a3ab9a, type: 2}
 --- !u!212 &212165975016868134
 SpriteRenderer:
   m_ObjectHideFlags: 1
