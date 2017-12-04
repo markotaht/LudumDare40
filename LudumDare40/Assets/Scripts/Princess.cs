@@ -11,7 +11,9 @@ public class Princess : MonoBehaviour
     private PlayerStats _playerStats;
     public GameObject _ufo;
     public GameObject _rat;
+    public GameObject _alien;
     private bool ratInScene = false;
+    private bool alienInScene = false;
 
     // Use this for initialization
     void Start()
@@ -24,7 +26,13 @@ public class Princess : MonoBehaviour
             ratInScene = true;
             _princessSprite.SetActive(false);
         }
-        else if (r < 50)
+        else if(r < 10)
+        {
+            Instantiate(_alien, transform);
+            alienInScene = true;
+            _princessSprite.SetActive(false);
+        }
+        else if (r < 60)
         {
             _princessSprite.SetActive(false);
         }
@@ -104,6 +112,13 @@ public class Princess : MonoBehaviour
             {
                 message = "A wild rat princess hath appeareth!";
                 _playerStats.endings[7] = true;
+                return;
+            }
+            else if (alienInScene)
+            {
+                message = "Thee w're abduct'd by a green sir!";
+                Debug.Log(_playerStats.endings.Count);
+                _playerStats.endings[10] = true;
                 return;
             }
             float random = Random.Range(0, 100);
