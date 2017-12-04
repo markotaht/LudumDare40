@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: dcf322e62a5b1c746ab5b3009c4e81f3
-timeCreated: 1512384413
+guid: 5656a9ffc422bfc4b92c671916ac92cd
+timeCreated: 1512384411
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -24,12 +24,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: holder__torch_holder_texture_png
-    second: {fileID: 2100000, guid: 26f161245d44b2041bd20b1e7240091c, type: 2}
+    second: {fileID: 2100000, guid: 7ff9c4fc0d88eba4783dfc3398e76600, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: torch
-    second: {fileID: 2100000, guid: 0afcce2600470f14e97d3e06eebb92db, type: 2}
+    second: {fileID: 2100000, guid: 6e3cf9505a7e60044b3e86d6d0a645e8, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
